@@ -372,7 +372,7 @@
 			mainGroup = 4E7F03902A8C7E7B00D14520;
 			packageReferences = (
 				4EEA54842A8D1A240050D697 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */,
 				4E78272D2AA6688C00D70173 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
 			);
 			productRefGroup = 4E7F039A2A8C7E7B00D14520 /* Products */;
@@ -650,7 +650,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -679,12 +679,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4E06F1E32AA27B7B0063E7DB /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */;
 			productName = RxCocoa;
 		};
 		4E06F1E52AA27B7B0063E7DB /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */;
 			productName = RxSwift;
 		};
 		4E78272E2AA6688C00D70173 /* Appwrite */ = {
