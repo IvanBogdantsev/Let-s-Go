@@ -56,9 +56,12 @@
 		4EFC65192A8CE4610012C422 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC65132A8CE4610012C422 /* BaseCoordinator.swift */; };
 		4EFC651C2A8CE5740012C422 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */; };
 		4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCA53B2AB1C1AF009F48A4 /* EntryOptionsViewController.swift */; };
+		DD76BB9EE9D052345969AF57 /* Pods_Let_s_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_s_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C05AF9233CFFE543C3176FD /* Pods-Let's Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Go.release.xcconfig"; path = "Target Support Files/Pods-Let's Go/Pods-Let's Go.release.xcconfig"; sourceTree = "<group>"; };
 		4E0269282AACA78700FD38FF /* AlertControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllers.swift; sourceTree = "<group>"; };
 		4E02692A2AACAA1C00FD38FF /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		4E06F1E72AA2912B0063E7DB /* isValidEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isValidEmail.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		4EFC65132A8CE4610012C422 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4EFCA53B2AB1C1AF009F48A4 /* EntryOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryOptionsViewController.swift; sourceTree = "<group>"; };
+		538F8B6BE5416CC3827640A9 /* Pods-Let's Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Go.debug.xcconfig"; path = "Target Support Files/Pods-Let's Go/Pods-Let's Go.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				4E06F1E62AA27B7B0063E7DB /* RxSwift in Frameworks */,
 				4E06F1E42AA27B7B0063E7DB /* RxCocoa in Frameworks */,
 				4EEA54862A8D1A240050D697 /* SnapKit in Frameworks */,
+				DD76BB9EE9D052345969AF57 /* Pods_Let_s_Go.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +153,8 @@
 			children = (
 				4E7F039B2A8C7E7B00D14520 /* Let's Go */,
 				4E7F039A2A8C7E7B00D14520 /* Products */,
+				5DE4E85F6C1EA4A729B51E7C /* Pods */,
+				6FE001D3D9DF18437EFC5A53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,6 +327,24 @@
 			path = EntryOptions;
 			sourceTree = "<group>";
 		};
+		5DE4E85F6C1EA4A729B51E7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				538F8B6BE5416CC3827640A9 /* Pods-Let's Go.debug.xcconfig */,
+				4C05AF9233CFFE543C3176FD /* Pods-Let's Go.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6FE001D3D9DF18437EFC5A53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,9 +352,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E7F03AD2A8C7E7B00D14520 /* Build configuration list for PBXNativeTarget "Let's Go" */;
 			buildPhases = (
+				F155F34AAE0A810797B719AB /* [CP] Check Pods Manifest.lock */,
 				4E7F03952A8C7E7B00D14520 /* Sources */,
 				4E7F03962A8C7E7B00D14520 /* Frameworks */,
 				4E7F03972A8C7E7B00D14520 /* Resources */,
+				F45843EB375AD4838DAE45EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -394,6 +421,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F155F34AAE0A810797B719AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Let's Go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F45843EB375AD4838DAE45EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Let's Go/Pods-Let's Go-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Let's Go/Pods-Let's Go-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Let's Go/Pods-Let's Go-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E7F03952A8C7E7B00D14520 /* Sources */ = {
@@ -566,6 +635,7 @@
 		};
 		4E7F03AE2A8C7E7B00D14520 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538F8B6BE5416CC3827640A9 /* Pods-Let's Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -597,6 +667,7 @@
 		};
 		4E7F03AF2A8C7E7B00D14520 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C05AF9233CFFE543C3176FD /* Pods-Let's Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
