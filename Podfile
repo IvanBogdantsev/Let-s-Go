@@ -6,6 +6,6 @@ target 'Let\'s Go' do
   use_frameworks!
 
   # Pods for Let's Go
-pod 'YandexMapsMobile', '4.3.1-lite'
+pod 'YandexMapsMobile', '4.4.0-lite'
 
 end

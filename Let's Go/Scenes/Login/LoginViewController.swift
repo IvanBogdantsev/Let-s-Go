@@ -91,7 +91,7 @@ final class LoginViewController: UIViewController {
         viewModel.outputs.showHidePasswordButtonToggled
             .subscribe(onNext: { [weak self] shouldShowPassword in
                 self?.loginView.passwordTextField.isSecureTextEntry = !shouldShowPassword
-                self?.loginView.showPasswordButton.tintColor = shouldShowPassword ? .letsgo_main_red : .letsgo_dark_gray
+                self?.loginView.showPasswordButton.tintColor = shouldShowPassword ? Colors.letsgo_main_red : Colors.letsgo_dark_gray
             })
             .disposed(by: disposeBag)
         

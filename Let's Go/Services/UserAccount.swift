@@ -7,31 +7,24 @@
 
 import Appwrite
 
-fileprivate enum Constants {
-    static let endpoint = "http://89.253.229.81/v1"
-    static let projectID = "63e2b309e37828599409"
-}
-
 fileprivate enum LoginError: Error {
     case unableToLogin(String)
     case unableToDeleteSession(String)
 }
 
-final class UserAccount {
+final class UserAccount: AWClient {
     
     static let shared = UserAccount()
     
-    private let client: Client
-    private let account: Account
+    private lazy var account: Account = {
+        Account(client)
+    }()
     
     @UserDataStorage<String>(key: UserDefaultsKey.loginSessionID)
     private var sessionID: String?
     
-    private init() {
-        client = Client()
-            .setEndpoint(Constants.endpoint)
-            .setProject(Constants.projectID)
-        account = Account(client)
+    private override init() {
+        super.init()
     }
     
     func createAccount(email: String, password: String, name: String? = nil) async throws {

@@ -17,7 +17,7 @@ protocol TabCoordinatorDelegate: AnyObject {
     func didLogoutUser(_ coordinator: TabCoordinator)
 }
 
-final class TabCoordinator: NSObject, TabCoordinatorInterface {
+final class TabCoordinator: BaseCoordinator {
     
     enum TabBarPage: Int, CaseIterable {
         case map
@@ -56,28 +56,23 @@ final class TabCoordinator: NSObject, TabCoordinatorInterface {
     }
 
     private let navigationController: UINavigationController
-    let tabBarController: UITabBarController
-    private(set) var children: [Coordinatable]
-
-    weak var startingViewController: UIViewController? { tabBarController }
-    weak var parent: Coordinatable?
+    private let tabBarController: UITabBarController
 
     weak var delegate: TabCoordinatorDelegate?
 
     required init(
-        navigationController: UINavigationController,
+        navigationController: BaseNavigationController,
         delegate: TabCoordinatorDelegate?
     ) {
-        self.children = []
         self.delegate = delegate
         self.navigationController = navigationController
-        self.tabBarController = UITabBarController()
-        super.init()
+        tabBarController = UITabBarController()
+        super.init(router: Router(rootController: navigationController))
+        startingViewController = tabBarController
         setupAppearance()
-        
     }
 
-    func start() {
+    override func start() {
         let controllers: [UINavigationController] = TabBarPage.allCases.map({ getTabController($0) })
         prepareTabBarController(withTabControllers: controllers)
         UIView.transition(
@@ -85,44 +80,61 @@ final class TabCoordinator: NSObject, TabCoordinatorInterface {
             duration: AnimationDuration.macroRegular.timeInterval,
             options: .transitionCrossDissolve,
             animations: {
-                self.navigationController.viewControllers = [self.tabBarController]
+                self.router.setRootModule(self.tabBarController)
             },
             completion: nil
         )
     }
 
-    deinit {
-        children.removeAll()
-    }
-
     private func prepareTabBarController(withTabControllers tabControllers: [UIViewController]) {
         tabBarController.setViewControllers(tabControllers, animated: false)
         tabBarController.selectedIndex = TabBarPage.allCases.first?.rawValue ?? 0
-        tabBarController.tabBar.isTranslucent = true
-        navigationController.isNavigationBarHidden = true
     }
     
     private func setupAppearance() {
-        self.tabBarController.view.backgroundColor = .black
-        self.tabBarController.tabBar.backgroundColor = .letsgo_main_gray
-        self.tabBarController.tabBar.tintColor = .letsgo_main_red
+        tabBarController.tabBar.backgroundColor = Colors.letsgo_main_gray
+        tabBarController.tabBar.tintColor = Colors.letsgo_main_red
+        tabBarController.tabBar.isTranslucent = true
+        navigationController.isNavigationBarHidden = true
     }
 
     private func getTabController(_ page: TabBarPage) -> UINavigationController {
         let navigationController = BaseNavigationController()
         navigationController.tabBarItem = page.tabBarItem
         
-        let vc = RemoveThisShitViewController()
-        vc.onExiButtonClick = { [weak self] in
-            self?.delegate?.didLogoutUser(self!)
+        let router = Router(rootController: navigationController)
+
+        switch page {
+        case .map:
+            let mapCoordinator = MapCoordinator(router: router)
+            mapCoordinator.parent = self
+            children.append(mapCoordinator)
+            mapCoordinator.start()
+        case .favorites:
+            let vc = RemoveThisShitViewController()
+            vc.onExiButtonClick = { [weak self] in
+                self?.delegate?.didLogoutUser(self!)
+            }
+            navigationController.viewControllers = [vc]
+        case .chat:
+            let vc = RemoveThisShitViewController()
+            vc.onExiButtonClick = { [weak self] in
+                self?.delegate?.didLogoutUser(self!)
+            }
+            navigationController.viewControllers = [vc]
+        case .profile:
+            let vc = RemoveThisShitViewController()
+            vc.onExiButtonClick = { [weak self] in
+                self?.delegate?.didLogoutUser(self!)
+            }
+            navigationController.viewControllers = [vc]
         }
-        
-        //MARK: TO REMOVE
-        navigationController.viewControllers = [vc]
-        
         return navigationController
     }
-        
+    
+}
+
+extension TabCoordinator: TabCoordinatorInterface {
     func currentPage() -> TabBarPage? {
         TabBarPage(rawValue: tabBarController.selectedIndex)
     }
@@ -136,22 +148,13 @@ final class TabCoordinator: NSObject, TabCoordinatorInterface {
     }
 }
 
-extension TabCoordinator: Coordinatable {
-    func add(_ child: Coordinatable) {
-        for element in children where  child === element {
-            return
-        }
-        children.append(child)
-    }
 
-    func remove(_ child: Coordinatable) {
-        guard !children.isEmpty else { return }
-        for (index, element) in children.enumerated() where element === child {
-            children.remove(at: index)
-            break
-        }
-    }
-}
+
+
+
+
+
+//TODO: Remove after demo
 
 class RemoveThisShitViewController: UIViewController {
     
@@ -163,7 +166,7 @@ class RemoveThisShitViewController: UIViewController {
         let label = UILabel()
         let button = UIButton()
         label.font = .letsgo_body()
-        label.textColor = .letsgo_main_red
+        label.textColor = Colors.letsgo_main_red
         label.textAlignment = .center
         label.text = "Здесь пока ничего нет, \n но ты можешь"
         label.numberOfLines = 0
@@ -185,7 +188,6 @@ class RemoveThisShitViewController: UIViewController {
         }
         
     }
-
     
     @objc func logout() {
         onExiButtonClick?()

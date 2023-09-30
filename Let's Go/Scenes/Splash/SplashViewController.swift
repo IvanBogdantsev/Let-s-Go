@@ -25,7 +25,7 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
-        view.backgroundColor = .letsgo_main_gray
+        view.backgroundColor = Colors.letsgo_main_gray
         logo.contentMode = .scaleAspectFit
         view.addSubview(logo)
         logo.snp.makeConstraints {

@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  Let's Go
+
+  Created by Vanya Bogdantsev on 23.09.2023.
+  
+*/
+
+"NSLocationAlwaysUsageDescription" = "Чтобы обеспечить точную навигацию, приложению необходим доступ к вашему местоположению";
+
+"NSLocationWhenInUseUsageDescription" = "Чтобы обеспечить точную навигацию, приложению необходим доступ к вашему местоположению";
+
+

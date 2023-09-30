@@ -16,5 +16,6 @@ enum Images {
     static let map_fill = UIImage(systemName: "map.fill")
     static let star_fill = UIImage(systemName: "star.fill")
     static let message_fill = UIImage(systemName: "message.fill")
-
+    static let user_location = UIImage(named: "user_location")
+    static let default_placemark = UIImage(named: "default_placemark")
 }

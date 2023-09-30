@@ -9,19 +9,19 @@ import UIKit
 
 extension UIButton {
     func defaultStyle() {
-        setTitleColor(.letsgo_white, for: .normal)
+        setTitleColor(Colors.letsgo_white, for: .normal)
         titleLabel?.font = .letsgo_title3()
         layer.cornerRadius = 10
     }
     
     func defaultStyleRed() {
         defaultStyle()
-        backgroundColor = .letsgo_main_red
+        backgroundColor = Colors.letsgo_main_red
     }
     
     func defaultStyleGray() {
         defaultStyle()
-        backgroundColor = .letsgo_dark_gray        
+        backgroundColor = Colors.letsgo_dark_gray
     }
     
     func defaultStyleBoldedRed() {
@@ -36,7 +36,7 @@ extension UIButton {
     
     func framelessStyle() {
         titleLabel?.font = .letsgo_body()
-        setTitleColor(.letsgo_white, for: .normal)
+        setTitleColor(Colors.letsgo_white, for: .normal)
     }
     
     func sighUpStyle() {

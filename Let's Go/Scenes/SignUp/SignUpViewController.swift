@@ -29,7 +29,7 @@ final class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .letsgo_main_gray
+        view.backgroundColor = Colors.letsgo_main_gray
         addTargets()
         bindViewModel()
     }
@@ -110,7 +110,7 @@ final class SignUpViewController: UIViewController {
         viewModel.outputs.showHidePasswordButtonToggled
             .subscribe(onNext: { [weak self] shouldShowPassword in
                 self?.signUpView.passwordTextField.isSecureTextEntry = !shouldShowPassword
-                self?.signUpView.showPasswordButton.tintColor = shouldShowPassword ? .letsgo_main_red : .letsgo_dark_gray
+                self?.signUpView.showPasswordButton.tintColor = shouldShowPassword ? Colors.letsgo_main_red : Colors.letsgo_dark_gray
             })
             .disposed(by: disposeBag)
         

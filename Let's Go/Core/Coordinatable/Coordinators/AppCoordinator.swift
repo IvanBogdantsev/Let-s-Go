@@ -22,13 +22,17 @@ final class AppCoordinator: BaseCoordinator {
         window.makeKeyAndVisible()
         self.window = window
         super.init(router: Router(rootController: navigationController))
+        setupAppearance()
     }
     
     override func start() {
+        router.setRootModule(SplashAssembly(sceneOutput: self).makeScene())
+    }
+    
+    private func setupAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
         router.root.navigationBar.standardAppearance = appearance
-        router.setRootModule(SplashAssembly(sceneOutput: self).makeScene())
     }
     
 }

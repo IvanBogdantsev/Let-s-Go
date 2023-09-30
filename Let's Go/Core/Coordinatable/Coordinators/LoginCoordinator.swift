@@ -19,6 +19,7 @@ final class LoginCoordinator: BaseCoordinator {
     
     override func start() {
         let scene = EntryOptionsViewController(sceneOutput: self)
+        startingViewController = scene
         UIView.transition(
             with: router.root.view,
             duration: AnimationDuration.macroRegular.timeInterval,

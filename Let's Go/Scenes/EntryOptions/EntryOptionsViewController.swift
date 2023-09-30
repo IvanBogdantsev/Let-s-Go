@@ -52,7 +52,7 @@ final class EntryOptionsViewController: UIViewController {
     }
     
     private func setStyle() {
-        view.backgroundColor = .letsgo_main_gray
+        view.backgroundColor = Colors.letsgo_main_gray
         
         logo.contentMode = .scaleAspectFit
         
@@ -63,7 +63,7 @@ final class EntryOptionsViewController: UIViewController {
         
         continueAsGuestButton.framelessStyle()
         continueAsGuestButton.setTitle(Strings.continue_as_guest, for: .normal)
-        continueAsGuestButton.setTitleColor(.letsgo_main_red, for: .normal)
+        continueAsGuestButton.setTitleColor(Colors.letsgo_main_red, for: .normal)
     }
     
     @objc private func signUpButtonPressed() {

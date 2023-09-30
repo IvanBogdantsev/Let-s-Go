@@ -38,7 +38,7 @@ final class LoginView: UIView {
     }
     
     private func setStyle() {
-        backgroundColor = .letsgo_main_gray
+        backgroundColor = Colors.letsgo_main_gray
         
         emailTextField.emailStyle()
         passwordTextField.securedEntryStyle()
@@ -47,7 +47,7 @@ final class LoginView: UIView {
         
         loginLabel.text = Strings.login_into_account
         loginLabel.font = .letsgo_title3().bolded
-        loginLabel.textColor = .letsgo_white
+        loginLabel.textColor = Colors.letsgo_white
         
         forgotPasswordButton.framelessStyle()
         forgotPasswordButton.setTitle(Strings.forgot_password, for: .normal)

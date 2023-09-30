@@ -7,8 +7,7 @@
 
 import UIKit.UIColor
 
-extension UIColor {
-    /// 0xFF3145
+enum Colors {
     static var letsgo_main_red: UIColor {
         .hex(0xFF3145)
     }

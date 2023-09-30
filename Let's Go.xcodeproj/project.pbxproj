@@ -17,15 +17,24 @@
 		4E06F1F22AA330400063E7DB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E06F1F12AA330400063E7DB /* SignUpView.swift */; };
 		4E06F1F42AA330C80063E7DB /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E06F1F32AA330C80063E7DB /* SignUpViewModel.swift */; };
 		4E06F1F62AA331AC0063E7DB /* SignUpAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E06F1F52AA331AC0063E7DB /* SignUpAssembly.swift */; };
+		4E12FF0A2AC78CCB0075C23B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12FF092AC78CCB0075C23B /* Date.swift */; };
 		4E2294372A939FBC0083E185 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */; };
 		4E2294392A93E8CA0083E185 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2294382A93E8CA0083E185 /* Images.swift */; };
 		4E22943B2A93EA840083E185 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22943A2A93EA840083E185 /* UITextField.swift */; };
+		4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */; };
+		4E5BECBA2ABDF61D00E5F61F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */; };
+		4E5BECBC2ABDF62900E5F61F /* MapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */; };
+		4E6572BD2ABF5A990013C2DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E6572BF2ABF5A990013C2DB /* InfoPlist.strings */; };
+		4E741AEE2AC4D9A4001DF880 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4E741AED2AC4D9A4001DF880 /* Nuke */; };
+		4E741AF02AC4D9A4001DF880 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 4E741AEF2AC4D9A4001DF880 /* NukeExtensions */; };
 		4E78272F2AA6688C00D70173 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 4E78272E2AA6688C00D70173 /* Appwrite */; };
 		4E7827322AA66CE100D70173 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7827312AA66CE100D70173 /* UserAccount.swift */; };
 		4E7F039D2A8C7E7B00D14520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F039C2A8C7E7B00D14520 /* AppDelegate.swift */; };
 		4E7F039F2A8C7E7B00D14520 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F039E2A8C7E7B00D14520 /* SceneDelegate.swift */; };
 		4E7F03A62A8C7E7B00D14520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7F03A52A8C7E7B00D14520 /* Assets.xcassets */; };
 		4E9397182AAA43E200F6EB7F /* UserDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9397172AAA43E200F6EB7F /* UserDataStorage.swift */; };
+		4EBF3E202AC1DE2B0006A92F /* Placemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF3E1F2AC1DE2B0006A92F /* Placemark.swift */; };
+		4EBF3E222AC1E3970006A92F /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF3E212AC1E3970006A92F /* Creator.swift */; };
 		4ED962862A8E37DE006BAA2D /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED962852A8E37DE006BAA2D /* LoginCoordinator.swift */; };
 		4EDA570B2A928675006ACBE4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA570A2A928675006ACBE4 /* Fonts.swift */; };
 		4EDA570D2A928ACB006ACBE4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA570C2A928ACB006ACBE4 /* Colors.swift */; };
@@ -38,6 +47,9 @@
 		4EDA571F2A92BA81006ACBE4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA571E2A92BA81006ACBE4 /* String.swift */; };
 		4EDA57212A92BB59006ACBE4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA57202A92BB59006ACBE4 /* Strings.swift */; };
 		4EDA57232A92CBAE006ACBE4 /* SceneAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA57222A92CBAE006ACBE4 /* SceneAssembly.swift */; };
+		4EDCE88B2ABEF7A5008D71E2 /* AWClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCE88A2ABEF7A5008D71E2 /* AWClient.swift */; };
+		4EDCE88D2ABF04DB008D71E2 /* Databases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCE88C2ABF04DB008D71E2 /* Databases.swift */; };
+		4EDCE8912ABF1803008D71E2 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCE8902ABF1803008D71E2 /* MapCoordinator.swift */; };
 		4EEA54742A8D108E0050D697 /* SplashContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA54702A8D108E0050D697 /* SplashContract.swift */; };
 		4EEA54752A8D108E0050D697 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA54712A8D108E0050D697 /* SplashViewController.swift */; };
 		4EEA54762A8D108E0050D697 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA54722A8D108E0050D697 /* SplashViewModel.swift */; };
@@ -56,6 +68,7 @@
 		4EFC65192A8CE4610012C422 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC65132A8CE4610012C422 /* BaseCoordinator.swift */; };
 		4EFC651C2A8CE5740012C422 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */; };
 		4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCA53B2AB1C1AF009F48A4 /* EntryOptionsViewController.swift */; };
+		4EFCC2D72ABF31750052BC96 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCC2D62ABF31750052BC96 /* MapView.swift */; };
 		DD76BB9EE9D052345969AF57 /* Pods_Let_s_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +83,15 @@
 		4E06F1F12AA330400063E7DB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4E06F1F32AA330C80063E7DB /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		4E06F1F52AA331AC0063E7DB /* SignUpAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAssembly.swift; sourceTree = "<group>"; };
+		4E12FF092AC78CCB0075C23B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		4E2294382A93E8CA0083E185 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		4E22943A2A93EA840083E185 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
+		4E6572BE2ABF5A990013C2DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E6572C02ABF5AAE0013C2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E7827312AA66CE100D70173 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		4E7F03992A8C7E7B00D14520 /* Let's Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7F039C2A8C7E7B00D14520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +99,8 @@
 		4E7F03A52A8C7E7B00D14520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E7F03AA2A8C7E7B00D14520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E9397172AAA43E200F6EB7F /* UserDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStorage.swift; sourceTree = "<group>"; };
+		4EBF3E1F2AC1DE2B0006A92F /* Placemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placemark.swift; sourceTree = "<group>"; };
+		4EBF3E212AC1E3970006A92F /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		4ED962852A8E37DE006BAA2D /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		4EDA570A2A928675006ACBE4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		4EDA570C2A928ACB006ACBE4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -92,6 +113,9 @@
 		4EDA571E2A92BA81006ACBE4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4EDA57202A92BB59006ACBE4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		4EDA57222A92CBAE006ACBE4 /* SceneAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAssembly.swift; sourceTree = "<group>"; };
+		4EDCE88A2ABEF7A5008D71E2 /* AWClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWClient.swift; sourceTree = "<group>"; };
+		4EDCE88C2ABF04DB008D71E2 /* Databases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databases.swift; sourceTree = "<group>"; };
+		4EDCE8902ABF1803008D71E2 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		4EEA54702A8D108E0050D697 /* SplashContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashContract.swift; sourceTree = "<group>"; };
 		4EEA54712A8D108E0050D697 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4EEA54722A8D108E0050D697 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +133,7 @@
 		4EFC65132A8CE4610012C422 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4EFCA53B2AB1C1AF009F48A4 /* EntryOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryOptionsViewController.swift; sourceTree = "<group>"; };
+		4EFCC2D62ABF31750052BC96 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		538F8B6BE5416CC3827640A9 /* Pods-Let's Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Go.debug.xcconfig"; path = "Target Support Files/Pods-Let's Go/Pods-Let's Go.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +144,9 @@
 			files = (
 				4E78272F2AA6688C00D70173 /* Appwrite in Frameworks */,
 				4E06F1E62AA27B7B0063E7DB /* RxSwift in Frameworks */,
+				4E741AF02AC4D9A4001DF880 /* NukeExtensions in Frameworks */,
 				4E06F1E42AA27B7B0063E7DB /* RxCocoa in Frameworks */,
+				4E741AEE2AC4D9A4001DF880 /* Nuke in Frameworks */,
 				4EEA54862A8D1A240050D697 /* SnapKit in Frameworks */,
 				DD76BB9EE9D052345969AF57 /* Pods_Let_s_Go.framework in Frameworks */,
 			);
@@ -139,10 +166,23 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		4E5BECB62ABDF5E100E5F61F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */,
+				4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */,
+				4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */,
+				4EFCC2D62ABF31750052BC96 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		4E7827302AA668BE00D70173 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4EDCE88A2ABEF7A5008D71E2 /* AWClient.swift */,
 				4E7827312AA66CE100D70173 /* UserAccount.swift */,
+				4EDCE88C2ABF04DB008D71E2 /* Databases.swift */,
 				4E9397172AAA43E200F6EB7F /* UserDataStorage.swift */,
 			);
 			path = Services;
@@ -179,12 +219,23 @@
 			path = "Let's Go";
 			sourceTree = "<group>";
 		};
+		4EBF3E232AC1E7560006A92F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EBF3E1F2AC1DE2B0006A92F /* Placemark.swift */,
+				4EBF3E212AC1E3970006A92F /* Creator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4EDA57082A928646006ACBE4 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				4EFCC2D82ABF3AFB0052BC96 /* Localization */,
 				4EEA54812A8D19A80050D697 /* Extensions */,
 				4EDA57092A928666006ACBE4 /* Styles */,
 				4EEA54782A8D10F00050D697 /* Components */,
+				4EBF3E232AC1E7560006A92F /* Models */,
 				4EDA57202A92BB59006ACBE4 /* Strings.swift */,
 			);
 			path = Library;
@@ -226,6 +277,7 @@
 		4EEA546E2A8D0FE60050D697 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4E5BECB62ABDF5E100E5F61F /* Map */,
 				4EFCA53A2AB1C19B009F48A4 /* EntryOptions */,
 				4E06F1EC2AA32CE60063E7DB /* SignUp */,
 				4EDA57122A92B355006ACBE4 /* Login */,
@@ -264,6 +316,7 @@
 				4EDA571C2A92B7C5006ACBE4 /* UIStackView.swift */,
 				4EDA571E2A92BA81006ACBE4 /* String.swift */,
 				4E02692A2AACAA1C00FD38FF /* Observable.swift */,
+				4E12FF092AC78CCB0075C23B /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +368,7 @@
 				4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */,
 				4EEA547F2A8D162D0050D697 /* TabCoordinator.swift */,
 				4ED962852A8E37DE006BAA2D /* LoginCoordinator.swift */,
+				4EDCE8902ABF1803008D71E2 /* MapCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -327,13 +381,20 @@
 			path = EntryOptions;
 			sourceTree = "<group>";
 		};
+		4EFCC2D82ABF3AFB0052BC96 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				4E6572BF2ABF5A990013C2DB /* InfoPlist.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		5DE4E85F6C1EA4A729B51E7C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				538F8B6BE5416CC3827640A9 /* Pods-Let's Go.debug.xcconfig */,
 				4C05AF9233CFFE543C3176FD /* Pods-Let's Go.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -368,6 +429,8 @@
 				4E06F1E32AA27B7B0063E7DB /* RxCocoa */,
 				4E06F1E52AA27B7B0063E7DB /* RxSwift */,
 				4E78272E2AA6688C00D70173 /* Appwrite */,
+				4E741AED2AC4D9A4001DF880 /* Nuke */,
+				4E741AEF2AC4D9A4001DF880 /* NukeExtensions */,
 			);
 			productName = "Let's Go";
 			productReference = 4E7F03992A8C7E7B00D14520 /* Let's Go.app */;
@@ -390,17 +453,18 @@
 			};
 			buildConfigurationList = 4E7F03942A8C7E7B00D14520 /* Build configuration list for PBXProject "Let's Go" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 4E7F03902A8C7E7B00D14520;
 			packageReferences = (
 				4EEA54842A8D1A240050D697 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */,
+				4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */,
 				4E78272D2AA6688C00D70173 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+				4E741AEC2AC4D9A4001DF880 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 4E7F039A2A8C7E7B00D14520 /* Products */;
 			projectDirPath = "";
@@ -417,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E7F03A62A8C7E7B00D14520 /* Assets.xcassets in Resources */,
+				4E6572BD2ABF5A990013C2DB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,29 +540,37 @@
 				4EFC651C2A8CE5740012C422 /* AppCoordinator.swift in Sources */,
 				4EDA57142A92B368006ACBE4 /* LoginViewController.swift in Sources */,
 				4EEA54752A8D108E0050D697 /* SplashViewController.swift in Sources */,
+				4EBF3E202AC1DE2B0006A92F /* Placemark.swift in Sources */,
 				4E0269292AACA78700FD38FF /* AlertControllers.swift in Sources */,
 				4ED962862A8E37DE006BAA2D /* LoginCoordinator.swift in Sources */,
 				4E06F1E82AA2912B0063E7DB /* isValidEmail.swift in Sources */,
 				4EDA57162A92B4AC006ACBE4 /* LoginView.swift in Sources */,
 				4EEA547C2A8D14640050D697 /* LoadingView.swift in Sources */,
+				4E5BECBA2ABDF61D00E5F61F /* MapViewModel.swift in Sources */,
 				4EFC65162A8CE4610012C422 /* Coordinatable.swift in Sources */,
 				4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */,
+				4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */,
 				4E06F1EB2AA294050063E7DB /* SkipNil.swift in Sources */,
 				4EF4A9102AA1200600AE43A7 /* ButtonStyles.swift in Sources */,
 				4E9397182AAA43E200F6EB7F /* UserDataStorage.swift in Sources */,
+				4EBF3E222AC1E3970006A92F /* Creator.swift in Sources */,
 				4E06F1F62AA331AC0063E7DB /* SignUpAssembly.swift in Sources */,
 				4EDA570F2A928B83006ACBE4 /* UIColor.swift in Sources */,
 				4EDA571D2A92B7C5006ACBE4 /* UIStackView.swift in Sources */,
 				4E7F039D2A8C7E7B00D14520 /* AppDelegate.swift in Sources */,
 				4EDA570D2A928ACB006ACBE4 /* Colors.swift in Sources */,
+				4E12FF0A2AC78CCB0075C23B /* Date.swift in Sources */,
 				4E02692B2AACAA1C00FD38FF /* Observable.swift in Sources */,
 				4E7827322AA66CE100D70173 /* UserAccount.swift in Sources */,
 				4EDA57182A92B4CB006ACBE4 /* LoginViewModel.swift in Sources */,
 				4EEA54802A8D162D0050D697 /* TabCoordinator.swift in Sources */,
+				4EDCE8912ABF1803008D71E2 /* MapCoordinator.swift in Sources */,
+				4E5BECBC2ABDF62900E5F61F /* MapAssembly.swift in Sources */,
 				4EF4A90E2AA11A9600AE43A7 /* TextFieldStyles.swift in Sources */,
 				4EFC65172A8CE4610012C422 /* Router.swift in Sources */,
 				4EDA571F2A92BA81006ACBE4 /* String.swift in Sources */,
 				4EDA571B2A92B4FE006ACBE4 /* LoginAssembly.swift in Sources */,
+				4EDCE88B2ABEF7A5008D71E2 /* AWClient.swift in Sources */,
 				4E22943B2A93EA840083E185 /* UITextField.swift in Sources */,
 				4E06F1F22AA330400063E7DB /* SignUpView.swift in Sources */,
 				4E2294392A93E8CA0083E185 /* Images.swift in Sources */,
@@ -507,16 +580,30 @@
 				4EDA57212A92BB59006ACBE4 /* Strings.swift in Sources */,
 				4EEA54832A8D19C40050D697 /* UIView.swift in Sources */,
 				4EEA54762A8D108E0050D697 /* SplashViewModel.swift in Sources */,
+				4EFCC2D72ABF31750052BC96 /* MapView.swift in Sources */,
 				4E2294372A939FBC0083E185 /* UnderlinedTextField.swift in Sources */,
 				4EDA570B2A928675006ACBE4 /* Fonts.swift in Sources */,
 				4E7F039F2A8C7E7B00D14520 /* SceneDelegate.swift in Sources */,
 				4EFC65192A8CE4610012C422 /* BaseCoordinator.swift in Sources */,
 				4EEA54742A8D108E0050D697 /* SplashContract.swift in Sources */,
 				4E06F1F02AA32FB80063E7DB /* SignUpViewController.swift in Sources */,
+				4EDCE88D2ABF04DB008D71E2 /* Databases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4E6572BF2ABF5A990013C2DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E6572BE2ABF5A990013C2DB /* ru */,
+				4E6572C02ABF5AAE0013C2DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E7F03AB2A8C7E7B00D14520 /* Debug */ = {
@@ -644,6 +731,9 @@
 				DEVELOPMENT_TEAM = 5ZYV4X786K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Let's Go/SupportingFiles/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To provide you with accurate navigation, the app requires access to your location data";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -654,6 +744,34 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"resolv\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YandexMapsMobile\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Let-s-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -676,6 +794,9 @@
 				DEVELOPMENT_TEAM = 5ZYV4X786K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Let's Go/SupportingFiles/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To provide you with accurate navigation, the app requires access to your location data";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -686,6 +807,34 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"resolv\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YandexMapsMobile\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Let-s-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -721,12 +870,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */ = {
+		4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
 				branch = main;
 				kind = branch;
+			};
+		};
+		4E741AEC2AC4D9A4001DF880 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
 			};
 		};
 		4E78272D2AA6688C00D70173 /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
@@ -750,13 +907,23 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4E06F1E32AA27B7B0063E7DB /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */;
+			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
 		4E06F1E52AA27B7B0063E7DB /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift.git" */;
+			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		4E741AED2AC4D9A4001DF880 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E741AEC2AC4D9A4001DF880 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		4E741AEF2AC4D9A4001DF880 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E741AEC2AC4D9A4001DF880 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
 		};
 		4E78272E2AA6688C00D70173 /* Appwrite */ = {
 			isa = XCSwiftPackageProductDependency;

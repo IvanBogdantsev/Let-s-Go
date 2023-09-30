@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import YandexMapsMobile
+
+fileprivate enum Constants {
+    static let YMKApiKey = "968b0dcb-fb73-4147-9608-d24dd932dbe1"
+}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        YMKMapKit.setApiKey(Constants.YMKApiKey)
+        YMKMapKit.sharedInstance()
         return true
     }
 

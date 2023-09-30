@@ -47,7 +47,7 @@ final class UnderlinedTextField: UITextField {
     }
     
     private func setStyle() {
-        line.backgroundColor = .letsgo_white
+        line.backgroundColor = Colors.letsgo_white
     }
     
 }

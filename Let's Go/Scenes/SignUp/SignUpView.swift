@@ -42,7 +42,7 @@ final class SignUpView: UIView {
     }
     
     private func setStyle() {
-        backgroundColor = .letsgo_main_gray
+        backgroundColor = Colors.letsgo_main_gray
 
         emailTextField.emailStyle()
         passwordTextField.securedEntryStyle()
@@ -52,16 +52,16 @@ final class SignUpView: UIView {
         
         signUpLabel.text = Strings.create_an_account
         signUpLabel.font = .letsgo_title3().bolded
-        signUpLabel.textColor = .letsgo_white
+        signUpLabel.textColor = Colors.letsgo_white
         
         signUpButton.sighUpStyle()
         
         passwordRulesLabel.font = .letsgo_caption2()
-        passwordRulesLabel.textColor = .letsgo_light_gray
+        passwordRulesLabel.textColor = Colors.letsgo_light_gray
         passwordRulesLabel.text = Strings.not_less_than_eight_characters
         
         nameIsOptionalLabel.font = .letsgo_caption2()
-        nameIsOptionalLabel.textColor = .letsgo_light_gray
+        nameIsOptionalLabel.textColor = Colors.letsgo_light_gray
         nameIsOptionalLabel.text = Strings.optional.capitalized
     }
     

@@ -9,7 +9,7 @@ import UIKit
 
 final class BaseNavigationController: UINavigationController {
 
-    var navigationBarTintColor = UIColor.letsgo_main_red
+    var navigationBarTintColor = Colors.letsgo_main_red
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ final class BaseNavigationController: UINavigationController {
     private func updateNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
-        appearance.titleTextAttributes = [.foregroundColor : UIColor.letsgo_white]
+        appearance.titleTextAttributes = [.foregroundColor : Colors.letsgo_white]
         navigationBar.standardAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance
         navigationBar.tintColor = navigationBarTintColor
