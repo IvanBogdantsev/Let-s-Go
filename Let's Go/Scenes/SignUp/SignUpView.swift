@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class SignUpView: UIView {
     
@@ -18,6 +19,7 @@ final class SignUpView: UIView {
     let signUpLabel = UILabel()
     let passwordRulesLabel = UILabel()
     let nameIsOptionalLabel = UILabel()
+    var formCenterY: Constraint?
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -34,7 +36,7 @@ final class SignUpView: UIView {
         vStackView.addArrangedSubviews(signUpLabel, nameTextField, nameIsOptionalLabel, emailTextField, passwordTextField, passwordRulesLabel, signUpButton)
         vStackView.snp.makeConstraints {
             $0.left.right.equalToSuperview().inset(75)
-            $0.center.equalToSuperview()
+            formCenterY = $0.centerY.equalToSuperview().constraint
         }
         vStackView.setCustomSpacing(10, after: signUpLabel)
         vStackView.setCustomSpacing(10, after: nameTextField)

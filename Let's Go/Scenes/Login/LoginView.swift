@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class LoginView: UIView {
     
@@ -16,6 +17,7 @@ final class LoginView: UIView {
     let loginButton = UIButton()
     let forgotPasswordButton = UIButton()
     let loginLabel = UILabel()
+    var formCenterY: Constraint?
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -32,7 +34,7 @@ final class LoginView: UIView {
         vStackView.addArrangedSubviews(loginLabel, emailTextField, passwordTextField, forgotPasswordButton, loginButton)
         vStackView.snp.makeConstraints {
             $0.left.right.equalToSuperview().inset(75)
-            $0.center.equalToSuperview()
+            formCenterY = $0.centerY.equalToSuperview().constraint
         }
         vStackView.setCustomSpacing(10, after: loginLabel)
     }

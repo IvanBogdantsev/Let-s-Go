@@ -11,8 +11,9 @@ import RxSwift
 final class SignUpViewController: UIViewController {
     
     private let signUpView = SignUpView()
-    private let viewModel: SignUpViewModelProtocol 
+    private let viewModel: SignUpViewModelProtocol
     private let disposeBag = DisposeBag()
+    private var formInitialFrame: CGRect?
     
     init(viewModel: SignUpViewModel) {
         self.viewModel = viewModel
@@ -32,6 +33,12 @@ final class SignUpViewController: UIViewController {
         view.backgroundColor = Colors.letsgo_main_gray
         addTargets()
         bindViewModel()
+        subscribeOnNotifications()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        formInitialFrame = signUpView.vStackView.frame
     }
     
     private func addTargets() {
@@ -106,7 +113,7 @@ final class SignUpViewController: UIViewController {
                 self?.signUpView.signUpButton.alpha = isFormValid ? 1 : 0.5
             })
             .disposed(by: disposeBag)
-
+        
         viewModel.outputs.showHidePasswordButtonToggled
             .subscribe(onNext: { [weak self] shouldShowPassword in
                 self?.signUpView.passwordTextField.isSecureTextEntry = !shouldShowPassword
@@ -134,6 +141,10 @@ final class SignUpViewController: UIViewController {
                 self?.present(UIAlertController.error(message), animated: true)
             })
             .disposed(by: disposeBag)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
@@ -177,3 +188,37 @@ extension SignUpViewController {
 }
 
 extension SignUpViewController: DisplayLoaderInterface {}
+
+extension SignUpViewController {
+    private func subscribeOnNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardDidChangeFrame(notification:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
+    }
+    
+    @objc private func keyboardDidChangeFrame(notification: NSNotification) {
+        guard let formInitialFrame,
+              let userInfo = notification.userInfo,
+              let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else { return }
+        
+        let duration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRaw = (userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve = UIView.AnimationOptions(rawValue: animationCurveRaw)
+        
+        let intersection = endFrame.intersection(formInitialFrame)
+        let offset = intersection.height == 0 ? 0 : intersection.height + 8
+        signUpView.formCenterY?.update(offset: -offset)
+        
+        UIView.animate(
+            withDuration: max(duration, AnimationDuration.microRegular.timeInterval),
+            delay: 0,
+            options: animationCurve,
+            animations: {
+                self.signUpView.layoutIfNeeded()
+            },
+            completion: nil
+        )
+    }
+}

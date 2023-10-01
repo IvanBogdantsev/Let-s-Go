@@ -13,6 +13,7 @@ final class LoginViewController: UIViewController {
     private let viewModel: LoginViewModelProtocol
     private let loginView = LoginView()
     private let disposeBag = DisposeBag()
+    private var formInitialFrame: CGRect?
     
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
@@ -31,6 +32,12 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         addTargets()
         bindViewModel()
+        subscribeOnNotifications()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        formInitialFrame = loginView.vStackView.frame
     }
     
     private func addTargets() {
@@ -87,7 +94,7 @@ final class LoginViewController: UIViewController {
                 self?.loginView.passwordTextField.becomeFirstResponder()
             })
             .disposed(by: disposeBag)
-
+        
         viewModel.outputs.showHidePasswordButtonToggled
             .subscribe(onNext: { [weak self] shouldShowPassword in
                 self?.loginView.passwordTextField.isSecureTextEntry = !shouldShowPassword
@@ -115,6 +122,10 @@ final class LoginViewController: UIViewController {
                 self?.hideLoader()
             })
             .disposed(by: disposeBag)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
@@ -150,3 +161,37 @@ extension LoginViewController {
 }
 
 extension LoginViewController: DisplayLoaderInterface {}
+
+extension LoginViewController {
+    private func subscribeOnNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardDidChangeFrame(notification:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
+    }
+    
+    @objc private func keyboardDidChangeFrame(notification: NSNotification) {
+        guard let formInitialFrame,
+              let userInfo = notification.userInfo,
+              let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else { return }
+        
+        let duration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRaw = (userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve = UIView.AnimationOptions(rawValue: animationCurveRaw)
+        
+        let intersection = endFrame.intersection(formInitialFrame)
+        let offset = intersection.height == 0 ? 0 : intersection.height + 8
+        loginView.formCenterY?.update(offset: -offset)
+        
+        UIView.animate(
+            withDuration: max(duration, AnimationDuration.microRegular.timeInterval),
+            delay: 0,
+            options: animationCurve,
+            animations: {
+                self.loginView.layoutIfNeeded()
+            },
+            completion: nil
+        )
+    }
+}
