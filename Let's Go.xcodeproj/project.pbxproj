@@ -734,6 +734,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To provide you with accurate navigation, the app requires access to your location data";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To provide you with accurate navigation, the app requires access to your location data";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app needs to be able to access your motion use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -797,6 +798,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To provide you with accurate navigation, the app requires access to your location data";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To provide you with accurate navigation, the app requires access to your location data";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app needs to be able to access your motion use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
