@@ -18,6 +18,7 @@ final class SignUpViewController: UIViewController {
     init(viewModel: SignUpViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        subscribeOnNotifications()
     }
     
     required init?(coder: NSCoder) {
@@ -30,15 +31,18 @@ final class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Colors.letsgo_main_gray
         addTargets()
         bindViewModel()
-        subscribeOnNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         formInitialFrame = signUpView.vStackView.frame
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
     }
     
     private func addTargets() {
@@ -188,7 +192,7 @@ extension SignUpViewController {
 }
 
 extension SignUpViewController: DisplayLoaderInterface {}
-
+// this is used to lift the form when keyboard appears
 extension SignUpViewController {
     private func subscribeOnNotifications() {
         NotificationCenter.default.addObserver(self,

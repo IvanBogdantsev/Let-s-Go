@@ -18,6 +18,7 @@ final class LoginViewController: UIViewController {
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        subscribeOnNotifications()
     }
     
     required init?(coder: NSCoder) {
@@ -32,12 +33,16 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         addTargets()
         bindViewModel()
-        subscribeOnNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         formInitialFrame = loginView.vStackView.frame
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
     }
     
     private func addTargets() {
@@ -161,7 +166,7 @@ extension LoginViewController {
 }
 
 extension LoginViewController: DisplayLoaderInterface {}
-
+// this is used to lift the form when keyboard appears
 extension LoginViewController {
     private func subscribeOnNotifications() {
         NotificationCenter.default.addObserver(self,
