@@ -39,11 +39,11 @@ final class MapViewModel: MapViewModelProtocol, MapViewModelOutputs {
             .map { boundingBox in
                 [
                     Query.limit(100),
-                    Query.greaterThan("toDate", value: Date().timeIntervalSince1970mls),
-                    Query.lessThanEqual(attribute: "latitude", value: boundingBox.northEast.latitude),
-                    Query.greaterThanEqual("latitude", value: boundingBox.southWest.latitude),
-                    Query.lessThanEqual(attribute: "longitude", value: boundingBox.northEast.longitude),
-                    Query.greaterThanEqual("longitude", value: boundingBox.southWest.longitude)
+                    Query.greaterThan(Placemark.CodingKeys.toDate.rawValue, value: Date().timeIntervalSince1970mls),
+                    Query.lessThanEqual(attribute: Placemark.CodingKeys.latitude.rawValue, value: boundingBox.northEast.latitude),
+                    Query.greaterThanEqual(Placemark.CodingKeys.latitude.rawValue, value: boundingBox.southWest.latitude),
+                    Query.lessThanEqual(attribute: Placemark.CodingKeys.longitude.rawValue, value: boundingBox.northEast.longitude),
+                    Query.greaterThanEqual(Placemark.CodingKeys.longitude.rawValue, value: boundingBox.southWest.longitude)
                 ]
             }
         
