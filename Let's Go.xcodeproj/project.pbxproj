@@ -21,6 +21,10 @@
 		4E2294372A939FBC0083E185 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */; };
 		4E2294392A93E8CA0083E185 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2294382A93E8CA0083E185 /* Images.swift */; };
 		4E22943B2A93EA840083E185 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22943A2A93EA840083E185 /* UITextField.swift */; };
+		4E3711912AE040FC00115405 /* EventPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711902AE040FC00115405 /* EventPreviewViewController.swift */; };
+		4E3711932AE0413A00115405 /* EventPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */; };
+		4E3711952AE0415300115405 /* EventPreviewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711942AE0415300115405 /* EventPreviewAssembly.swift */; };
+		4E3711972AE0416600115405 /* EventPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711962AE0416600115405 /* EventPreviewView.swift */; };
 		4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */; };
 		4E5BECBA2ABDF61D00E5F61F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */; };
 		4E5BECBC2ABDF62900E5F61F /* MapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */; };
@@ -87,6 +91,10 @@
 		4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		4E2294382A93E8CA0083E185 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		4E22943A2A93EA840083E185 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		4E3711902AE040FC00115405 /* EventPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewViewController.swift; sourceTree = "<group>"; };
+		4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewViewModel.swift; sourceTree = "<group>"; };
+		4E3711942AE0415300115405 /* EventPreviewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewAssembly.swift; sourceTree = "<group>"; };
+		4E3711962AE0416600115405 /* EventPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewView.swift; sourceTree = "<group>"; };
 		4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
@@ -164,6 +172,17 @@
 				4E06F1F52AA331AC0063E7DB /* SignUpAssembly.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4E37118F2AE040DA00115405 /* EventPreview */ = {
+			isa = PBXGroup;
+			children = (
+				4E3711902AE040FC00115405 /* EventPreviewViewController.swift */,
+				4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */,
+				4E3711942AE0415300115405 /* EventPreviewAssembly.swift */,
+				4E3711962AE0416600115405 /* EventPreviewView.swift */,
+			);
+			path = EventPreview;
 			sourceTree = "<group>";
 		};
 		4E5BECB62ABDF5E100E5F61F /* Map */ = {
@@ -277,6 +296,7 @@
 		4EEA546E2A8D0FE60050D697 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4E37118F2AE040DA00115405 /* EventPreview */,
 				4E5BECB62ABDF5E100E5F61F /* Map */,
 				4EFCA53A2AB1C19B009F48A4 /* EntryOptions */,
 				4E06F1EC2AA32CE60063E7DB /* SignUp */,
@@ -541,6 +561,7 @@
 				4EFC651C2A8CE5740012C422 /* AppCoordinator.swift in Sources */,
 				4EDA57142A92B368006ACBE4 /* LoginViewController.swift in Sources */,
 				4EEA54752A8D108E0050D697 /* SplashViewController.swift in Sources */,
+				4E3711932AE0413A00115405 /* EventPreviewViewModel.swift in Sources */,
 				4EBF3E202AC1DE2B0006A92F /* Placemark.swift in Sources */,
 				4E0269292AACA78700FD38FF /* AlertControllers.swift in Sources */,
 				4ED962862A8E37DE006BAA2D /* LoginCoordinator.swift in Sources */,
@@ -550,6 +571,8 @@
 				4E5BECBA2ABDF61D00E5F61F /* MapViewModel.swift in Sources */,
 				4EFC65162A8CE4610012C422 /* Coordinatable.swift in Sources */,
 				4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */,
+				4E3711912AE040FC00115405 /* EventPreviewViewController.swift in Sources */,
+				4E3711952AE0415300115405 /* EventPreviewAssembly.swift in Sources */,
 				4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */,
 				4E06F1EB2AA294050063E7DB /* SkipNil.swift in Sources */,
 				4EF4A9102AA1200600AE43A7 /* ButtonStyles.swift in Sources */,
@@ -578,6 +601,7 @@
 				4EDA57232A92CBAE006ACBE4 /* SceneAssembly.swift in Sources */,
 				4EEA54892A8D1C370050D697 /* AnimationDuration.swift in Sources */,
 				4EEA54772A8D108E0050D697 /* SplashAssembly.swift in Sources */,
+				4E3711972AE0416600115405 /* EventPreviewView.swift in Sources */,
 				4EDA57212A92BB59006ACBE4 /* Strings.swift in Sources */,
 				4EEA54832A8D19C40050D697 /* UIView.swift in Sources */,
 				4EEA54762A8D108E0050D697 /* SplashViewModel.swift in Sources */,
@@ -658,7 +682,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -714,7 +738,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -743,7 +767,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -807,7 +831,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

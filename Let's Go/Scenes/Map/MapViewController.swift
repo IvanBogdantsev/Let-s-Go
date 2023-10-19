@@ -24,6 +24,7 @@ final class MapViewController: UIViewController {
         mapView.map.setMapLoadedListenerWith(self)
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
+        mapView.map.mapObjects.addTapListener(with: self)
     }
     
     required init?(coder: NSCoder) {
@@ -81,5 +82,11 @@ extension MapViewController: CLLocationManagerDelegate {
         guard let location = locations.first else { return }
         mapView.map.move(with: YMKCameraPosition(target: YMKPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude), zoom: 12, azimuth: 0, tilt: 0), animation: YMKAnimation(type: .smooth, duration: Float(AnimationDuration.macroRegular.timeInterval)))
         manager.stopUpdatingLocation()
+    }
+}
+
+extension MapViewController: YMKMapObjectTapListener {
+    func onMapObjectTap(with mapObject: YMKMapObject, point: YMKPoint) -> Bool {
+        return true
     }
 }
