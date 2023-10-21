@@ -25,9 +25,9 @@
 		4E3711932AE0413A00115405 /* EventPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */; };
 		4E3711952AE0415300115405 /* EventPreviewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711942AE0415300115405 /* EventPreviewAssembly.swift */; };
 		4E3711972AE0416600115405 /* EventPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711962AE0416600115405 /* EventPreviewView.swift */; };
-		4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */; };
-		4E5BECBA2ABDF61D00E5F61F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */; };
-		4E5BECBC2ABDF62900E5F61F /* MapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */; };
+		4E5BECB82ABDF60C00E5F61F /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB72ABDF60C00E5F61F /* EventMapViewController.swift */; };
+		4E5BECBA2ABDF61D00E5F61F /* EventMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB92ABDF61D00E5F61F /* EventMapViewModel.swift */; };
+		4E5BECBC2ABDF62900E5F61F /* EventMapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */; };
 		4E6572BD2ABF5A990013C2DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E6572BF2ABF5A990013C2DB /* InfoPlist.strings */; };
 		4E741AEE2AC4D9A4001DF880 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4E741AED2AC4D9A4001DF880 /* Nuke */; };
 		4E741AF02AC4D9A4001DF880 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 4E741AEF2AC4D9A4001DF880 /* NukeExtensions */; };
@@ -72,7 +72,7 @@
 		4EFC65192A8CE4610012C422 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC65132A8CE4610012C422 /* BaseCoordinator.swift */; };
 		4EFC651C2A8CE5740012C422 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */; };
 		4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCA53B2AB1C1AF009F48A4 /* EntryOptionsViewController.swift */; };
-		4EFCC2D72ABF31750052BC96 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCC2D62ABF31750052BC96 /* MapView.swift */; };
+		4EFCC2D72ABF31750052BC96 /* EventMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFCC2D62ABF31750052BC96 /* EventMapView.swift */; };
 		DD76BB9EE9D052345969AF57 /* Pods_Let_s_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,9 +95,9 @@
 		4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewViewModel.swift; sourceTree = "<group>"; };
 		4E3711942AE0415300115405 /* EventPreviewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewAssembly.swift; sourceTree = "<group>"; };
 		4E3711962AE0416600115405 /* EventPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewView.swift; sourceTree = "<group>"; };
-		4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssembly.swift; sourceTree = "<group>"; };
+		4E5BECB72ABDF60C00E5F61F /* EventMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapViewController.swift; sourceTree = "<group>"; };
+		4E5BECB92ABDF61D00E5F61F /* EventMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapViewModel.swift; sourceTree = "<group>"; };
+		4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapAssembly.swift; sourceTree = "<group>"; };
 		4E6572BE2ABF5A990013C2DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E6572C02ABF5AAE0013C2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E7827312AA66CE100D70173 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		4EFC65132A8CE4610012C422 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		4EFC651B2A8CE5740012C422 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4EFCA53B2AB1C1AF009F48A4 /* EntryOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryOptionsViewController.swift; sourceTree = "<group>"; };
-		4EFCC2D62ABF31750052BC96 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4EFCC2D62ABF31750052BC96 /* EventMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapView.swift; sourceTree = "<group>"; };
 		538F8B6BE5416CC3827640A9 /* Pods-Let's Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Go.debug.xcconfig"; path = "Target Support Files/Pods-Let's Go/Pods-Let's Go.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,15 +185,15 @@
 			path = EventPreview;
 			sourceTree = "<group>";
 		};
-		4E5BECB62ABDF5E100E5F61F /* Map */ = {
+		4E5BECB62ABDF5E100E5F61F /* EventMap */ = {
 			isa = PBXGroup;
 			children = (
-				4E5BECB72ABDF60C00E5F61F /* MapViewController.swift */,
-				4E5BECB92ABDF61D00E5F61F /* MapViewModel.swift */,
-				4E5BECBB2ABDF62900E5F61F /* MapAssembly.swift */,
-				4EFCC2D62ABF31750052BC96 /* MapView.swift */,
+				4E5BECB72ABDF60C00E5F61F /* EventMapViewController.swift */,
+				4E5BECB92ABDF61D00E5F61F /* EventMapViewModel.swift */,
+				4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */,
+				4EFCC2D62ABF31750052BC96 /* EventMapView.swift */,
 			);
-			path = Map;
+			path = EventMap;
 			sourceTree = "<group>";
 		};
 		4E7827302AA668BE00D70173 /* Services */ = {
@@ -297,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				4E37118F2AE040DA00115405 /* EventPreview */,
-				4E5BECB62ABDF5E100E5F61F /* Map */,
+				4E5BECB62ABDF5E100E5F61F /* EventMap */,
 				4EFCA53A2AB1C19B009F48A4 /* EntryOptions */,
 				4E06F1EC2AA32CE60063E7DB /* SignUp */,
 				4EDA57122A92B355006ACBE4 /* Login */,
@@ -568,12 +568,12 @@
 				4E06F1E82AA2912B0063E7DB /* isValidEmail.swift in Sources */,
 				4EDA57162A92B4AC006ACBE4 /* LoginView.swift in Sources */,
 				4EEA547C2A8D14640050D697 /* LoadingView.swift in Sources */,
-				4E5BECBA2ABDF61D00E5F61F /* MapViewModel.swift in Sources */,
+				4E5BECBA2ABDF61D00E5F61F /* EventMapViewModel.swift in Sources */,
 				4EFC65162A8CE4610012C422 /* Coordinatable.swift in Sources */,
 				4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */,
 				4E3711912AE040FC00115405 /* EventPreviewViewController.swift in Sources */,
 				4E3711952AE0415300115405 /* EventPreviewAssembly.swift in Sources */,
-				4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */,
+				4E5BECB82ABDF60C00E5F61F /* EventMapViewController.swift in Sources */,
 				4E06F1EB2AA294050063E7DB /* SkipNil.swift in Sources */,
 				4EF4A9102AA1200600AE43A7 /* ButtonStyles.swift in Sources */,
 				4E9397182AAA43E200F6EB7F /* UserDataStorage.swift in Sources */,
@@ -589,7 +589,7 @@
 				4EDA57182A92B4CB006ACBE4 /* LoginViewModel.swift in Sources */,
 				4EEA54802A8D162D0050D697 /* TabCoordinator.swift in Sources */,
 				4EDCE8912ABF1803008D71E2 /* MapCoordinator.swift in Sources */,
-				4E5BECBC2ABDF62900E5F61F /* MapAssembly.swift in Sources */,
+				4E5BECBC2ABDF62900E5F61F /* EventMapAssembly.swift in Sources */,
 				4EF4A90E2AA11A9600AE43A7 /* TextFieldStyles.swift in Sources */,
 				4EFC65172A8CE4610012C422 /* Router.swift in Sources */,
 				4EDA571F2A92BA81006ACBE4 /* String.swift in Sources */,
@@ -605,7 +605,7 @@
 				4EDA57212A92BB59006ACBE4 /* Strings.swift in Sources */,
 				4EEA54832A8D19C40050D697 /* UIView.swift in Sources */,
 				4EEA54762A8D108E0050D697 /* SplashViewModel.swift in Sources */,
-				4EFCC2D72ABF31750052BC96 /* MapView.swift in Sources */,
+				4EFCC2D72ABF31750052BC96 /* EventMapView.swift in Sources */,
 				4E2294372A939FBC0083E185 /* UnderlinedTextField.swift in Sources */,
 				4EDA570B2A928675006ACBE4 /* Fonts.swift in Sources */,
 				4E7F039F2A8C7E7B00D14520 /* SceneDelegate.swift in Sources */,

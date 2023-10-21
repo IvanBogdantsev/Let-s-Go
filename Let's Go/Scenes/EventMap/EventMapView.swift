@@ -9,7 +9,7 @@ import UIKit
 import YandexMapsMobile
 import Nuke
 
-final class MapView: UIView {
+final class EventMapView: UIView {
     
     let mapView = YMKMapView()
     /// mapView.mapWindow.map
@@ -43,12 +43,12 @@ final class MapView: UIView {
         map.isNightModeEnabled = true
     }
     
-    func addPlacemarks(_ placemarks: Placemarks) {
+    func addEvents(_ events: Events) {
         clusteredColletion?.clear()
-        placemarks.forEach { placemarkModel in
+        events.forEach { eventModel in
             let placemark = clusteredColletion?.addPlacemark()
             let style = YMKIconStyle()
-            if let urlString = placemarkModel.pinURL,
+            if let urlString = eventModel.pinURL,
                let url = URL(string: urlString) {
                 Task {
                     do {
@@ -64,14 +64,14 @@ final class MapView: UIView {
                 style.scale = 0.4
                 placemark?.setIconWith(Images.default_placemark ?? UIImage(), style: style)
             }
-            placemark?.geometry = YMKPoint(latitude: placemarkModel.latitude, longitude: placemarkModel.longitude)
+            placemark?.geometry = YMKPoint(latitude: eventModel.latitude, longitude: eventModel.longitude)
             clusteredColletion?.clusterPlacemarks(withClusterRadius: 60, minZoom: 9)
         }
     }
     
 }
 
-extension MapView: YMKClusterListener {
+extension EventMapView: YMKClusterListener {
     func onClusterAdded(with cluster: YMKCluster) {
         cluster.appearance.setIconWith(clusterImage(cluster.size))
     }
@@ -111,7 +111,7 @@ extension MapView: YMKClusterListener {
     }
 }
 
-extension MapView: YMKUserLocationObjectListener {
+extension EventMapView: YMKUserLocationObjectListener {
     func onObjectAdded(with view: YMKUserLocationView) {
         let pinPlacemark = view.pin
         
@@ -127,11 +127,7 @@ extension MapView: YMKUserLocationObjectListener {
                 tappableArea: nil))
     }
     
-    func onObjectRemoved(with view: YMKUserLocationView) {
-        
-    }
+    func onObjectRemoved(with view: YMKUserLocationView) {}
     
-    func onObjectUpdated(with view: YMKUserLocationView, event: YMKObjectEvent) {
-        
-    }
+    func onObjectUpdated(with view: YMKUserLocationView, event: YMKObjectEvent) {}
 }

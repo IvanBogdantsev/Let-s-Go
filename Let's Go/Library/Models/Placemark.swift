@@ -1,5 +1,5 @@
 //
-//  Placemark.swift
+//  Event.swift
 //  Let's Go
 //
 //  Created by Vanya Bogdantsev on 25.09.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Placemark: Codable {
+struct Event: Codable {
     
     enum Tag: String, Codable {
         case forMalesOnly = "for_males_only"
@@ -34,7 +34,7 @@ struct Placemark: Codable {
     let collectionID, event: String?
 }
 
-extension Placemark {
+extension Event {
     enum CodingKeys: String, CodingKey {
         case creatorID, creator, userCount, id, permissions
         case photosURL = "photosUrl"

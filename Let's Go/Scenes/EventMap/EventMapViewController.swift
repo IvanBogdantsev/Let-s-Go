@@ -10,21 +10,21 @@ import RxSwift
 import YandexMapsMobile
 import CoreLocation
 
-final class MapViewController: UIViewController {
+final class EventMapViewController: UIViewController {
     
-    private let mapView = MapView()
-    private let viewModel: MapViewModelProtocol
+    private let eventMapView = EventMapView()
+    private let viewModel: EventMapViewModelProtocol
     private let disposeBag = DisposeBag()
     private let locationManager = CLLocationManager()
         
-    init(viewModel: MapViewModel) {
+    init(viewModel: EventMapViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        mapView.map.addCameraListener(with: self)
-        mapView.map.setMapLoadedListenerWith(self)
+        eventMapView.map.addCameraListener(with: self)
+        eventMapView.map.setMapLoadedListenerWith(self)
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
-        mapView.map.mapObjects.addTapListener(with: self)
+        eventMapView.map.mapObjects.addTapListener(with: self)
     }
     
     required init?(coder: NSCoder) {
@@ -32,7 +32,7 @@ final class MapViewController: UIViewController {
     }
     
     override func loadView() {
-        view = mapView
+        view = eventMapView
     }
     
     override func viewDidLoad() {
@@ -44,10 +44,10 @@ final class MapViewController: UIViewController {
     private func addTargets() {}
     
     private func bindViewModel() {
-        self.viewModel.outputs.placemarks
+        self.viewModel.outputs.events
             .observeOnMainThread()
-            .subscribe(onNext: { [weak self] placemarks in
-                self?.mapView.addPlacemarks(placemarks)
+            .subscribe(onNext: { [weak self] events in
+                self?.eventMapView.addEvents(events)
             }, onError: { [weak self] message in
                 print(message.localizedDescription)
             })
@@ -56,7 +56,7 @@ final class MapViewController: UIViewController {
     
 }
 
-extension MapViewController: YMKMapCameraListener,  YMKMapLoadedListener {
+extension EventMapViewController: YMKMapCameraListener,  YMKMapLoadedListener {
     func onMapLoaded(with statistics: YMKMapLoadStatistics) {
         guard let boundingBox = createCurrentBoundingBox() else { return }
         viewModel.inputs.boundingBoxUpdated(boundingBox)
@@ -68,24 +68,24 @@ extension MapViewController: YMKMapCameraListener,  YMKMapLoadedListener {
     }
     
     func createCurrentBoundingBox() -> YMKBoundingBox? {
-        guard let northEast = mapView.mapView.mapWindow.screenToWorld(with: YMKScreenPoint(
-            x: Float(mapView.mapView.mapWindow.width()), y: 0)),
-              let southWest = mapView.mapView.mapWindow.screenToWorld(with: YMKScreenPoint(
-                x: 0, y: Float(mapView.mapView.mapWindow.height())))
+        guard let northEast = eventMapView.mapView.mapWindow.screenToWorld(with: YMKScreenPoint(
+            x: Float(eventMapView.mapView.mapWindow.width()), y: 0)),
+              let southWest = eventMapView.mapView.mapWindow.screenToWorld(with: YMKScreenPoint(
+                x: 0, y: Float(eventMapView.mapView.mapWindow.height())))
         else { return nil }
         return YMKBoundingBox(southWest: southWest, northEast: northEast)
     }
 }
 
-extension MapViewController: CLLocationManagerDelegate {
+extension EventMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
-        mapView.map.move(with: YMKCameraPosition(target: YMKPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude), zoom: 12, azimuth: 0, tilt: 0), animation: YMKAnimation(type: .smooth, duration: Float(AnimationDuration.macroRegular.timeInterval)))
+        eventMapView.map.move(with: YMKCameraPosition(target: YMKPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude), zoom: 12, azimuth: 0, tilt: 0), animation: YMKAnimation(type: .smooth, duration: Float(AnimationDuration.macroRegular.timeInterval)))
         manager.stopUpdatingLocation()
     }
 }
 
-extension MapViewController: YMKMapObjectTapListener {
+extension EventMapViewController: YMKMapObjectTapListener {
     func onMapObjectTap(with mapObject: YMKMapObject, point: YMKPoint) -> Bool {
         return true
     }
