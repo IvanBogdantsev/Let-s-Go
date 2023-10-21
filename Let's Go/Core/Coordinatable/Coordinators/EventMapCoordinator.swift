@@ -9,7 +9,7 @@ protocol EventMapSceneOutput {
     //func showEventPreview
 }
 
-final class MapCoordinator: BaseCoordinator {
+final class EventMapCoordinator: BaseCoordinator {
         
     override func start() {
         let scene = EventMapAssembly(sceneOutput: self).makeScene()
@@ -19,6 +19,6 @@ final class MapCoordinator: BaseCoordinator {
     
 }
 
-extension MapCoordinator: EventMapSceneOutput {
+extension EventMapCoordinator: EventMapSceneOutput {
     
 }
