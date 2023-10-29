@@ -7,9 +7,24 @@
 
 import Appwrite
 
+enum DatabaseItem {
+    case marks
+    case registrations
+    
+    fileprivate var id: String {
+        switch self {
+        case .marks:
+            Constants.marksСollectionId
+        case .registrations:
+            Constants.registrationsCollectionId
+        }
+    }
+}
+
 fileprivate enum Constants {
     static let databaseId = "63e2b4503fa1bf5d1a5f"
     static let marksСollectionId = "63e2b456b185a4c53116"
+    static let registrationsCollectionId = "646f33df2ebfbdbb56a2"
 }
 
 final class Databases: AWClient {
@@ -24,8 +39,8 @@ final class Databases: AWClient {
         super.init()
     }
     
-    func getItems<T: Codable>(_ type: T.Type, queries: [String]? = nil) async throws -> [T] {
-        return try await databases.listDocuments(databaseId: Constants.databaseId, collectionId: Constants.marksСollectionId, queries: queries, nestedType: T.self).documents.map { $0.data }
+    func getItems<T: Codable>(_ type: T.Type, items: DatabaseItem, queries: [String]? = nil) async throws -> [T] {
+        return try await databases.listDocuments(databaseId: Constants.databaseId, collectionId: items.id, queries: queries, nestedType: T.self).documents.map { $0.data }
     }
      
     

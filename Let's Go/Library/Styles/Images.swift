@@ -18,4 +18,5 @@ enum Images {
     static let message_fill = UIImage(systemName: "message.fill")
     static let user_location = UIImage(named: "user_location")
     static let default_placemark = UIImage(named: "default_placemark")
+    static let default_event_pic = UIImage(named: "default_event_pic")
 }

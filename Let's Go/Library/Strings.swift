@@ -7,19 +7,36 @@
 
 enum Strings {
     static let email = "email".localized()
-    static let password = "пароль".localized()
-    static let login_into_account = "Войти в аккаунт".localized()
-    static let login = "войти".localized()
-    static let forgot_password = "Забыли пароль?".localized()
-    static let create_an_account = "Создать аккаунт".localized()
-    static let name = "имя".localized()
-    static let not_less_than_eight_characters = "Не менее 8 символов".localized()
-    static let ok = "Ок".localized()
-    static let something_wrong = "Что-то не так...".localized()
-    static let map = "карта".localized()
-    static let favorites = "избранные".localized()
-    static let chat = "чат".localized()
-    static let profile = "профиль".localized()
-    static let optional = "опционально".localized()
-    static let continue_as_guest = "Продолжить как гость".localized()
+    static let password = "password".localized()
+    static let login_into_account = "login_into_account".localized()
+    static let login = "login".localized()
+    static let forgot_password = "forgot_password".localized()
+    static let create_an_account = "create_an_account".localized()
+    static let name = "name".localized()
+    static let not_less_than_eight_characters = "not_less_than_eight_characters".localized()
+    static let ok = "ok".localized()
+    static let something_wrong = "something_wrong".localized()
+    static let map = "map".localized()
+    static let favorites = "favorites".localized()
+    static let chat = "chat".localized()
+    static let profile = "profile".localized()
+    static let optional = "optional".localized()
+    static let continue_as_guest = "continue_as_guest".localized()
+    static let event_without_name = "event_without_name".localized()
+    static let unknown = "unknown".localized()
+    static let RUB = "₽"
+    static let participation_cost = "participation_cost".localized()
+    static let date = "date".localized()
+    static let will_last = "will_last".localized()
+    static let details = "подробнее".localized()
+    
+    static func participants_of_total(num: Int, of total: Int) -> String {
+        let format = "%d_from_%d participants".localized()
+        return String(format: format, num, total)
+    }
+    
+    static func num_participants(num: Int) -> String {
+        let format = "participants:_%d".localized()
+        return String(format: format, num)
+    }
 }

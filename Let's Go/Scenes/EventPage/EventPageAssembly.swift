@@ -1,13 +1,12 @@
 //
-//  EventPreviewAssembly.swift
-//  Let's Go
+//  EventPageViewModelAssembly.swift
 //
 //  Created by Vanya Bogdantsev on 18.10.2023.
 //
 
 import UIKit
 
-struct EventPreviewAssembly: SceneAssembly {
+struct EventPageAssembly: SceneAssembly {
     private let event: Event
     private let sceneOutput: EventMapSceneOutput?
     
@@ -17,8 +16,8 @@ struct EventPreviewAssembly: SceneAssembly {
     }
     
     func makeScene() -> UIViewController {
-        let viewModel = EventPreviewViewModel(event: event, sceneOutput: sceneOutput)
-        let viewController = EventPreviewViewController(viewModel: viewModel)
+        let viewModel = EventPageViewModel(event: event, sceneOutput: sceneOutput)
+        let viewController = EventPageViewController(viewModel: viewModel)
         return viewController
     }
 }

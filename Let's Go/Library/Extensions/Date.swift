@@ -11,4 +11,8 @@ extension Date {
     var timeIntervalSince1970mls: Int {
         Int(self.timeIntervalSince1970 * 1000)
     }
+    
+    init(timeIntervalSince1970mls: Int) {
+        self.init(timeIntervalSince1970: TimeInterval(timeIntervalSince1970mls / 1000))
+    }
 }

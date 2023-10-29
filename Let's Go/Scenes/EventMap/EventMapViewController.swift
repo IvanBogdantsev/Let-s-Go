@@ -87,6 +87,8 @@ extension EventMapViewController: CLLocationManagerDelegate {
 
 extension EventMapViewController: YMKMapObjectTapListener {
     func onMapObjectTap(with mapObject: YMKMapObject, point: YMKPoint) -> Bool {
+        guard let event = mapObject.userData as? Event else { return false }
+        viewModel.inputs.eventSelected(event)
         return true
     }
 }

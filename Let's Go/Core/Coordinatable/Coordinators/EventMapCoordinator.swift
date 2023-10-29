@@ -6,7 +6,8 @@
 //
 
 protocol EventMapSceneOutput {
-    //func showEventPreview
+    func showEventPreview(_: Event)
+    func showEventPage(_: Event)
 }
 
 final class EventMapCoordinator: BaseCoordinator {
@@ -20,5 +21,13 @@ final class EventMapCoordinator: BaseCoordinator {
 }
 
 extension EventMapCoordinator: EventMapSceneOutput {
+    func showEventPreview(_ event: Event) {
+        let scene = EventPreviewAssembly(event, sceneOutput: self).makeScene()
+        router.present(scene, animated: true)
+    }
     
+    func showEventPage(_ event: Event) {
+        let scene = EventPageAssembly(event, sceneOutput: self).makeScene()
+        router.push(scene, animated: true)
+    }
 }

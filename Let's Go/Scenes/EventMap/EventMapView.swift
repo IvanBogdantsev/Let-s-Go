@@ -48,8 +48,7 @@ final class EventMapView: UIView {
         events.forEach { eventModel in
             let placemark = clusteredColletion?.addPlacemark()
             let style = YMKIconStyle()
-            if let urlString = eventModel.pinURL,
-               let url = URL(string: urlString) {
+            if let url = eventModel.pinURL {
                 Task {
                     do {
                         let image = try await ImagePipeline.shared.image(for: url)
@@ -64,6 +63,7 @@ final class EventMapView: UIView {
                 style.scale = 0.4
                 placemark?.setIconWith(Images.default_placemark ?? UIImage(), style: style)
             }
+            placemark?.userData = eventModel
             placemark?.geometry = YMKPoint(latitude: eventModel.latitude, longitude: eventModel.longitude)
             clusteredColletion?.clusterPlacemarks(withClusterRadius: 60, minZoom: 9)
         }

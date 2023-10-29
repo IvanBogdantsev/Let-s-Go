@@ -44,7 +44,7 @@ final class EventMapViewModel: EventMapViewModelProtocol, EventMapViewModelOutpu
             .map { boundingBox in
                 [
                     Query.limit(100),
-                    Query.greaterThan(Event.CodingKeys.toDate.rawValue, value: Date().timeIntervalSince1970mls),
+                   // Query.greaterThan(Event.CodingKeys.toDate.rawValue, value: Date().timeIntervalSince1970mls),
                     Query.lessThanEqual(attribute: Event.CodingKeys.latitude.rawValue, value: boundingBox.northEast.latitude),
                     Query.greaterThanEqual(Event.CodingKeys.latitude.rawValue, value: boundingBox.southWest.latitude),
                     Query.lessThanEqual(attribute: Event.CodingKeys.longitude.rawValue, value: boundingBox.northEast.longitude),
@@ -54,7 +54,7 @@ final class EventMapViewModel: EventMapViewModelProtocol, EventMapViewModelOutpu
         
         self.events = queries
             .flatMap { [unowned self] queries in
-                self.createEventLoadingEvent(queries)
+                createEventLoadingEvent(queries)
             }
     }
     
@@ -62,7 +62,7 @@ final class EventMapViewModel: EventMapViewModelProtocol, EventMapViewModelOutpu
         Observable.create { observer in
             let task = Task {
                 do {
-                    let session = try await Databases.shared.getItems(Event.self, queries: queries)
+                    let session = try await Databases.shared.getItems(Event.self, items: .marks, queries: queries)
                     observer.on(.next(session))
                     observer.on(.completed)
                 } catch {
@@ -83,6 +83,6 @@ extension EventMapViewModel: EventMapViewModelInputs {
     }
     
     func eventSelected(_ event: Event) {
-        
+        sceneOutput?.showEventPreview(event)
     }
 }

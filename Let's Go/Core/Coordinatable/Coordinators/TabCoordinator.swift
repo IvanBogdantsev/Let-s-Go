@@ -106,7 +106,7 @@ final class TabCoordinator: BaseCoordinator {
 
         switch page {
         case .map:
-            let mapCoordinator = MapCoordinator(router: router)
+            let mapCoordinator = EventMapCoordinator(router: router)
             mapCoordinator.parent = self
             children.append(mapCoordinator)
             mapCoordinator.start()
