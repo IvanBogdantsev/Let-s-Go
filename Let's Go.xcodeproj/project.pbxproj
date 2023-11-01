@@ -27,6 +27,7 @@
 		4E3711932AE0413A00115405 /* EventPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */; };
 		4E3711952AE0415300115405 /* EventPreviewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711942AE0415300115405 /* EventPreviewAssembly.swift */; };
 		4E3711972AE0416600115405 /* EventPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3711962AE0416600115405 /* EventPreviewView.swift */; };
+		4E4E04062AF1E2D900D4EADC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E04052AF1E2D900D4EADC /* Keys.swift */; };
 		4E5BECB82ABDF60C00E5F61F /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB72ABDF60C00E5F61F /* EventMapViewController.swift */; };
 		4E5BECBA2ABDF61D00E5F61F /* EventMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB92ABDF61D00E5F61F /* EventMapViewModel.swift */; };
 		4E5BECBC2ABDF62900E5F61F /* EventMapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */; };
@@ -108,6 +109,7 @@
 		4E3711922AE0413A00115405 /* EventPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewViewModel.swift; sourceTree = "<group>"; };
 		4E3711942AE0415300115405 /* EventPreviewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewAssembly.swift; sourceTree = "<group>"; };
 		4E3711962AE0416600115405 /* EventPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewView.swift; sourceTree = "<group>"; };
+		4E4E04052AF1E2D900D4EADC /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4E5BECB72ABDF60C00E5F61F /* EventMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapViewController.swift; sourceTree = "<group>"; };
 		4E5BECB92ABDF61D00E5F61F /* EventMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapViewModel.swift; sourceTree = "<group>"; };
 		4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapAssembly.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 			children = (
 				4E7F03A52A8C7E7B00D14520 /* Assets.xcassets */,
 				4E7F03AA2A8C7E7B00D14520 /* Info.plist */,
+				4E4E04052AF1E2D900D4EADC /* Keys.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EEA547A2A8D11120050D697 /* DisplayLoaderInterface.swift in Sources */,
+				4E4E04062AF1E2D900D4EADC /* Keys.swift in Sources */,
 				4E06F1F42AA330C80063E7DB /* SignUpViewModel.swift in Sources */,
 				4EFC65182A8CE4610012C422 /* BaseNavigationController.swift in Sources */,
 				4EFC651C2A8CE5740012C422 /* AppCoordinator.swift in Sources */,

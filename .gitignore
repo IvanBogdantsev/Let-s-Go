@@ -11,7 +11,7 @@ xcuserdata/
 .DS_Store
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-/SupportingFiles/Keys.swift
+Keys.swift
 build/
 DerivedData/
 *.moved-aside
