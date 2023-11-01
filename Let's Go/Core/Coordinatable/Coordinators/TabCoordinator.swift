@@ -80,7 +80,7 @@ final class TabCoordinator: BaseCoordinator {
             duration: AnimationDuration.macroRegular.timeInterval,
             options: .transitionCrossDissolve,
             animations: {
-                self.router.setRootModule(self.tabBarController)
+                self.router.setRootModule(self.tabBarController, hideBar: true)
             },
             completion: nil
         )

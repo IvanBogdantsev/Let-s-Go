@@ -7,9 +7,10 @@
 
 import Appwrite
 
-enum DatabaseItem {
+enum Collection {
     case marks
     case registrations
+    case users
     
     fileprivate var id: String {
         switch self {
@@ -17,6 +18,8 @@ enum DatabaseItem {
             Constants.marksСollectionId
         case .registrations:
             Constants.registrationsCollectionId
+        case .users:
+            Constants.usersCollectionId
         }
     }
 }
@@ -25,6 +28,7 @@ fileprivate enum Constants {
     static let databaseId = "63e2b4503fa1bf5d1a5f"
     static let marksСollectionId = "63e2b456b185a4c53116"
     static let registrationsCollectionId = "646f33df2ebfbdbb56a2"
+    static let usersCollectionId = "646d0d2149f236a62413"
 }
 
 final class Databases: AWClient {
@@ -39,9 +43,12 @@ final class Databases: AWClient {
         super.init()
     }
     
-    func getItems<T: Codable>(_ type: T.Type, items: DatabaseItem, queries: [String]? = nil) async throws -> [T] {
-        return try await databases.listDocuments(databaseId: Constants.databaseId, collectionId: items.id, queries: queries, nestedType: T.self).documents.map { $0.data }
+    func getItems<T: Codable>(_ type: T.Type, from collection: Collection, queries: [String]? = nil) async throws -> [T] {
+        return try await databases.listDocuments(databaseId: Constants.databaseId, collectionId: collection.id, queries: queries, nestedType: T.self).documents.map { $0.data }
     }
-     
+    
+    func getItem<T: Codable>(_ type: T.Type, from collection: Collection, itemId: String, queries: [String]? = nil) async throws -> T {
+        return try await databases.getDocument(databaseId: Constants.databaseId, collectionId: collection.id, documentId: itemId, queries: queries, nestedType: T.self).data
+    }
     
 }

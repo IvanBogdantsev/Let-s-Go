@@ -31,6 +31,8 @@
 		4E5BECBA2ABDF61D00E5F61F /* EventMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECB92ABDF61D00E5F61F /* EventMapViewModel.swift */; };
 		4E5BECBC2ABDF62900E5F61F /* EventMapAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */; };
 		4E6572BD2ABF5A990013C2DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E6572BF2ABF5A990013C2DB /* InfoPlist.strings */; };
+		4E6DCD602AF07D3F006E8EA2 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4E6DCD5F2AF07D3F006E8EA2 /* AlamofireImage */; };
+		4E6DCD622AF08258006E8EA2 /* CreatorPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6DCD612AF08258006E8EA2 /* CreatorPreview.swift */; };
 		4E741AEE2AC4D9A4001DF880 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4E741AED2AC4D9A4001DF880 /* Nuke */; };
 		4E741AF02AC4D9A4001DF880 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 4E741AEF2AC4D9A4001DF880 /* NukeExtensions */; };
 		4E78272F2AA6688C00D70173 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 4E78272E2AA6688C00D70173 /* Appwrite */; };
@@ -44,7 +46,8 @@
 		4EB421A22AEEC9C6002F4CCF /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4219E2AEEC9C6002F4CCF /* EventPageViewController.swift */; };
 		4EB421A32AEEC9C6002F4CCF /* EventPageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4219F2AEEC9C6002F4CCF /* EventPageAssembly.swift */; };
 		4EBF3E202AC1DE2B0006A92F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF3E1F2AC1DE2B0006A92F /* Event.swift */; };
-		4EBF3E222AC1E3970006A92F /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF3E212AC1E3970006A92F /* Creator.swift */; };
+		4EBF3E222AC1E3970006A92F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF3E212AC1E3970006A92F /* User.swift */; };
+		4EC9A9712AEFC4700001194B /* UserPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9A9702AEFC4700001194B /* UserPreview.swift */; };
 		4ECC934A2AE879F500FD57B2 /* HorizontalViewScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC93492AE879F500FD57B2 /* HorizontalViewScroller.swift */; };
 		4ED962862A8E37DE006BAA2D /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED962852A8E37DE006BAA2D /* LoginCoordinator.swift */; };
 		4EDA570B2A928675006ACBE4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA570A2A928675006ACBE4 /* Fonts.swift */; };
@@ -110,6 +113,7 @@
 		4E5BECBB2ABDF62900E5F61F /* EventMapAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapAssembly.swift; sourceTree = "<group>"; };
 		4E6572BE2ABF5A990013C2DB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E6572C02ABF5AAE0013C2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E6DCD612AF08258006E8EA2 /* CreatorPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorPreview.swift; sourceTree = "<group>"; };
 		4E7827312AA66CE100D70173 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		4E7F03992A8C7E7B00D14520 /* Let's Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7F039C2A8C7E7B00D14520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +126,8 @@
 		4EB4219E2AEEC9C6002F4CCF /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		4EB4219F2AEEC9C6002F4CCF /* EventPageAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageAssembly.swift; sourceTree = "<group>"; };
 		4EBF3E1F2AC1DE2B0006A92F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		4EBF3E212AC1E3970006A92F /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
+		4EBF3E212AC1E3970006A92F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4EC9A9702AEFC4700001194B /* UserPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreview.swift; sourceTree = "<group>"; };
 		4ECC93492AE879F500FD57B2 /* HorizontalViewScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewScroller.swift; sourceTree = "<group>"; };
 		4ED962852A8E37DE006BAA2D /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		4EDA570A2A928675006ACBE4 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E78272F2AA6688C00D70173 /* Appwrite in Frameworks */,
+				4E6DCD602AF07D3F006E8EA2 /* AlamofireImage in Frameworks */,
 				4E06F1E62AA27B7B0063E7DB /* RxSwift in Frameworks */,
 				4E741AF02AC4D9A4001DF880 /* NukeExtensions in Frameworks */,
 				4E06F1E42AA27B7B0063E7DB /* RxCocoa in Frameworks */,
@@ -278,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				4EBF3E1F2AC1DE2B0006A92F /* Event.swift */,
-				4EBF3E212AC1E3970006A92F /* Creator.swift */,
+				4EBF3E212AC1E3970006A92F /* User.swift */,
 				4EF10F942AE740F300BEDAD5 /* Registration.swift */,
 			);
 			path = Models;
@@ -363,6 +369,8 @@
 				4EEA547B2A8D14640050D697 /* LoadingView.swift */,
 				4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */,
 				4ECC93492AE879F500FD57B2 /* HorizontalViewScroller.swift */,
+				4EC9A9702AEFC4700001194B /* UserPreview.swift */,
+				4E6DCD612AF08258006E8EA2 /* CreatorPreview.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -491,6 +499,7 @@
 				4E78272E2AA6688C00D70173 /* Appwrite */,
 				4E741AED2AC4D9A4001DF880 /* Nuke */,
 				4E741AEF2AC4D9A4001DF880 /* NukeExtensions */,
+				4E6DCD5F2AF07D3F006E8EA2 /* AlamofireImage */,
 			);
 			productName = "Let's Go";
 			productReference = 4E7F03992A8C7E7B00D14520 /* Let's Go.app */;
@@ -526,6 +535,7 @@
 				4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */,
 				4E78272D2AA6688C00D70173 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
 				4E741AEC2AC4D9A4001DF880 /* XCRemoteSwiftPackageReference "Nuke" */,
+				4E6DCD5E2AF07D3F006E8EA2 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 4E7F039A2A8C7E7B00D14520 /* Products */;
 			projectDirPath = "";
@@ -613,13 +623,14 @@
 				4E5BECBA2ABDF61D00E5F61F /* EventMapViewModel.swift in Sources */,
 				4EFC65162A8CE4610012C422 /* Coordinatable.swift in Sources */,
 				4EFCA53C2AB1C1AF009F48A4 /* EntryOptionsViewController.swift in Sources */,
+				4EC9A9712AEFC4700001194B /* UserPreview.swift in Sources */,
 				4E3711912AE040FC00115405 /* EventPreviewViewController.swift in Sources */,
 				4E3711952AE0415300115405 /* EventPreviewAssembly.swift in Sources */,
 				4E5BECB82ABDF60C00E5F61F /* EventMapViewController.swift in Sources */,
 				4E06F1EB2AA294050063E7DB /* SkipNil.swift in Sources */,
 				4EF4A9102AA1200600AE43A7 /* ButtonStyles.swift in Sources */,
 				4E9397182AAA43E200F6EB7F /* UserDataStorage.swift in Sources */,
-				4EBF3E222AC1E3970006A92F /* Creator.swift in Sources */,
+				4EBF3E222AC1E3970006A92F /* User.swift in Sources */,
 				4EB421A32AEEC9C6002F4CCF /* EventPageAssembly.swift in Sources */,
 				4E06F1F62AA331AC0063E7DB /* SignUpAssembly.swift in Sources */,
 				4EDA570F2A928B83006ACBE4 /* UIColor.swift in Sources */,
@@ -642,6 +653,7 @@
 				4EDA571F2A92BA81006ACBE4 /* String.swift in Sources */,
 				4EDA571B2A92B4FE006ACBE4 /* LoginAssembly.swift in Sources */,
 				4EDCE88B2ABEF7A5008D71E2 /* AWClient.swift in Sources */,
+				4E6DCD622AF08258006E8EA2 /* CreatorPreview.swift in Sources */,
 				4E22943B2A93EA840083E185 /* UITextField.swift in Sources */,
 				4E06F1F22AA330400063E7DB /* SignUpView.swift in Sources */,
 				4E2294392A93E8CA0083E185 /* Images.swift in Sources */,
@@ -777,7 +789,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -956,6 +968,14 @@
 				kind = branch;
 			};
 		};
+		4E6DCD5E2AF07D3F006E8EA2 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 		4E741AEC2AC4D9A4001DF880 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke.git";
@@ -992,6 +1012,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4E06F1E22AA27B7B0063E7DB /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		4E6DCD5F2AF07D3F006E8EA2 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E6DCD5E2AF07D3F006E8EA2 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 		4E741AED2AC4D9A4001DF880 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;

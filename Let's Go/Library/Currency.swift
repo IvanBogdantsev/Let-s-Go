@@ -8,7 +8,7 @@
 enum Currency {
     case RUB
     
-    var userFacing: String {
+    var userFacingString: String {
         switch self {
         case .RUB:
             return Strings.RUB

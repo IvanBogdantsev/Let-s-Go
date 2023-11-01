@@ -28,7 +28,10 @@ enum Strings {
     static let participation_cost = "participation_cost".localized()
     static let date = "date".localized()
     static let will_last = "will_last".localized()
-    static let details = "подробнее".localized()
+    static let details = "details".localized()
+    static let creator = "creator".localized()
+    static let active = "active".localized()
+    static let go = "go".localized()
     
     static func participants_of_total(num: Int, of total: Int) -> String {
         let format = "%d_from_%d participants".localized()

@@ -62,7 +62,7 @@ final class EventMapViewModel: EventMapViewModelProtocol, EventMapViewModelOutpu
         Observable.create { observer in
             let task = Task {
                 do {
-                    let session = try await Databases.shared.getItems(Event.self, items: .marks, queries: queries)
+                    let session = try await Databases.shared.getItems(Event.self, from: .marks, queries: queries)
                     observer.on(.next(session))
                     observer.on(.completed)
                 } catch {

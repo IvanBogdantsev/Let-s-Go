@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Event: Codable {
+struct Event {
     
     enum Tag: String, Codable {
         case forMalesOnly = "for_males_only"
@@ -17,7 +17,7 @@ struct Event: Codable {
     }
     
     let creatorID: String?
-    let creator: Creator?
+    let creator: User?
     let userCount: Int?
     let id: String
     let permissions: [String]?
@@ -35,7 +35,7 @@ struct Event: Codable {
     let collectionID, event: String?
 }
 
-extension Event {
+extension Event: Codable {
     enum CodingKeys: String, CodingKey {
         case creatorID, creator, userCount, permissions
         case id = "$id"
@@ -53,7 +53,7 @@ extension Event {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         creatorID = try container.decodeIfPresent(String.self, forKey: .creatorID)
-        creator = try container.decodeIfPresent(Creator.self, forKey: .creator)
+        creator = try container.decodeIfPresent(User.self, forKey: .creator)
         userCount = try container.decodeIfPresent(Int.self, forKey: .userCount)
         id = try container.decode(String.self, forKey: .id)
         permissions = try container.decodeIfPresent([String].self, forKey: .permissions)

@@ -35,6 +35,24 @@ final class HorizontalViewScroller: UIScrollView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func insertViews(_ views: [UIView]) {
+        var currentLeft = contentView.snp.left
+        views.forEach { view in
+            contentView.addSubview(view)
+            view.snp.makeConstraints {
+                $0.top.bottom.equalToSuperview()
+                $0.left.equalTo(currentLeft).offset(spacing)
+                currentLeft = view.snp.right
+            }
+        }
+        
+        if let view = contentView.subviews.last {
+            view.snp.makeConstraints {
+                $0.right.equalToSuperview().inset(spacing)
+            }
+        }
+    }
 
     func insertImages(_ images: [UIImage?]) {
         var currentLeft = contentView.snp.left

@@ -120,7 +120,7 @@ final class EventPreviewViewModel: EventPreviewViewModelProtocol, EventPreviewVi
         Observable.create { observer in
             let task = Task {
                 do {
-                    let session = try await Databases.shared.getItems(Registration.self, items: .registrations, queries: [Query.equal(Registration.CodingKeys.status.rawValue, value: ["creator", "go"]), Query.equal(Registration.CodingKeys.markID.rawValue, value: event.id)])
+                    let session = try await Databases.shared.getItems(Registration.self, from: .registrations, queries: [Query.equal(Registration.CodingKeys.status.rawValue, value: ["creator", "go"]), Query.equal(Registration.CodingKeys.markID.rawValue, value: event.id)])
                     observer.on(.next(session))
                     observer.on(.completed)
                 } catch {

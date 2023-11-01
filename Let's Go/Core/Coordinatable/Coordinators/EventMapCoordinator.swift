@@ -27,6 +27,7 @@ extension EventMapCoordinator: EventMapSceneOutput {
     }
     
     func showEventPage(_ event: Event) {
+        router.dismissModule(animated: false)
         let scene = EventPageAssembly(event, sceneOutput: self).makeScene()
         router.push(scene, animated: true)
     }

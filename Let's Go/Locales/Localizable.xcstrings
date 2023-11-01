@@ -12,6 +12,17 @@
         }
       }
     },
+    "active" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активные"
+          }
+        }
+      }
+    },
     "chat" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -45,6 +56,17 @@
         }
       }
     },
+    "creator" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Организатор"
+          }
+        }
+      }
+    },
     "date" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -62,7 +84,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Подробнее"
+            "value" : "подробнее"
           }
         }
       }
@@ -107,6 +129,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Забыли пароль?"
+          }
+        }
+      }
+    },
+    "go" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Идут"
           }
         }
       }
