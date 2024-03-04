@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07DF94EB2B90F2F800421EEC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DF94EA2B90F2F800421EEC /* Colors.xcassets */; };
+		07DF94ED2B9106A900421EEC /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF94EC2B9106A900421EEC /* PaddedTextField.swift */; };
 		4E0269292AACA78700FD38FF /* AlertControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0269282AACA78700FD38FF /* AlertControllers.swift */; };
 		4E02692B2AACAA1C00FD38FF /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02692A2AACAA1C00FD38FF /* Observable.swift */; };
 		4E06F1E42AA27B7B0063E7DB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4E06F1E32AA27B7B0063E7DB /* RxCocoa */; };
@@ -73,6 +75,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07DF94EA2B90F2F800421EEC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		07DF94EC2B9106A900421EEC /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_s_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C05AF9233CFFE543C3176FD /* Pods-Let's Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let's Go.release.xcconfig"; path = "Target Support Files/Pods-Let's Go/Pods-Let's Go.release.xcconfig"; sourceTree = "<group>"; };
 		4E0269282AACA78700FD38FF /* AlertControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllers.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 			children = (
 				4E7F03A52A8C7E7B00D14520 /* Assets.xcassets */,
 				4E7F03AA2A8C7E7B00D14520 /* Info.plist */,
+				07DF94EA2B90F2F800421EEC /* Colors.xcassets */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			children = (
 				4EEA547B2A8D14640050D697 /* LoadingView.swift */,
 				4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */,
+				07DF94EC2B9106A900421EEC /* PaddedTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07DF94EB2B90F2F800421EEC /* Colors.xcassets in Resources */,
 				4E7F03A62A8C7E7B00D14520 /* Assets.xcassets in Resources */,
 				4E6572BD2ABF5A990013C2DB /* InfoPlist.strings in Resources */,
 			);
@@ -571,6 +578,7 @@
 				4EFC65172A8CE4610012C422 /* Router.swift in Sources */,
 				4EDA571F2A92BA81006ACBE4 /* String.swift in Sources */,
 				4EDA571B2A92B4FE006ACBE4 /* LoginAssembly.swift in Sources */,
+				07DF94ED2B9106A900421EEC /* PaddedTextField.swift in Sources */,
 				4EDCE88B2ABEF7A5008D71E2 /* AWClient.swift in Sources */,
 				4E22943B2A93EA840083E185 /* UITextField.swift in Sources */,
 				4E06F1F22AA330400063E7DB /* SignUpView.swift in Sources */,

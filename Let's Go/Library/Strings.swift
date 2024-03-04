@@ -22,4 +22,7 @@ enum Strings {
     static let profile = "профиль".localized()
     static let optional = "опционально".localized()
     static let continue_as_guest = "Продолжить как гость".localized()
+    static let phone_number = "phone_number".localized()
+    static let accept_personal_data = "accept_personal_data".localized()
+    static let continue_title = "continue_title".localized()
 }
