@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0769285D2B9F18C800809F6E /* InputPhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769285C2B9F18C800809F6E /* InputPhoneModel.swift */; };
+		076928602B9F1B9900809F6E /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769285F2B9F1B9900809F6E /* EnterCodeViewController.swift */; };
+		076928622B9F1BB000809F6E /* EnterCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076928612B9F1BB000809F6E /* EnterCodeView.swift */; };
+		076928642B9F1CC900809F6E /* EnterCodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076928632B9F1CC900809F6E /* EnterCodeAssembly.swift */; };
+		07A26BB02B9F1CFF00A7EC74 /* EnterCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BAF2B9F1CFF00A7EC74 /* EnterCodeViewModel.swift */; };
+		07A26BB22B9F3BD400A7EC74 /* CodeEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BB12B9F3BD400A7EC74 /* CodeEnterView.swift */; };
+		07A26BB42B9F3E7A00A7EC74 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BB32B9F3E7A00A7EC74 /* CodeTextField.swift */; };
+		07A26BB62B9F3F6700A7EC74 /* CodeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BB52B9F3F6700A7EC74 /* CodeItemView.swift */; };
 		07DF94EB2B90F2F800421EEC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DF94EA2B90F2F800421EEC /* Colors.xcassets */; };
 		07DF94ED2B9106A900421EEC /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF94EC2B9106A900421EEC /* PaddedTextField.swift */; };
 		4E0269292AACA78700FD38FF /* AlertControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0269282AACA78700FD38FF /* AlertControllers.swift */; };
@@ -75,6 +83,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0769285C2B9F18C800809F6E /* InputPhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPhoneModel.swift; sourceTree = "<group>"; };
+		0769285F2B9F1B9900809F6E /* EnterCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
+		076928612B9F1BB000809F6E /* EnterCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeView.swift; sourceTree = "<group>"; };
+		076928632B9F1CC900809F6E /* EnterCodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeAssembly.swift; sourceTree = "<group>"; };
+		07A26BAF2B9F1CFF00A7EC74 /* EnterCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCodeViewModel.swift; sourceTree = "<group>"; };
+		07A26BB12B9F3BD400A7EC74 /* CodeEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEnterView.swift; sourceTree = "<group>"; };
+		07A26BB32B9F3E7A00A7EC74 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
+		07A26BB52B9F3F6700A7EC74 /* CodeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeItemView.swift; sourceTree = "<group>"; };
 		07DF94EA2B90F2F800421EEC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		07DF94EC2B9106A900421EEC /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_s_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +175,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0769285E2B9F1B2C00809F6E /* EnterCode */ = {
+			isa = PBXGroup;
+			children = (
+				0769285F2B9F1B9900809F6E /* EnterCodeViewController.swift */,
+				076928612B9F1BB000809F6E /* EnterCodeView.swift */,
+				07A26BAF2B9F1CFF00A7EC74 /* EnterCodeViewModel.swift */,
+				076928632B9F1CC900809F6E /* EnterCodeAssembly.swift */,
+			);
+			path = EnterCode;
+			sourceTree = "<group>";
+		};
+		07A26BB72B9F5F7700A7EC74 /* CodeEnterView */ = {
+			isa = PBXGroup;
+			children = (
+				07A26BB12B9F3BD400A7EC74 /* CodeEnterView.swift */,
+				07A26BB52B9F3F6700A7EC74 /* CodeItemView.swift */,
+				07A26BB32B9F3E7A00A7EC74 /* CodeTextField.swift */,
+			);
+			path = CodeEnterView;
+			sourceTree = "<group>";
+		};
 		4E06F1EC2AA32CE60063E7DB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +265,7 @@
 			children = (
 				4EBF3E1F2AC1DE2B0006A92F /* Placemark.swift */,
 				4EBF3E212AC1E3970006A92F /* Creator.swift */,
+				0769285C2B9F18C800809F6E /* InputPhoneModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +320,7 @@
 		4EEA546E2A8D0FE60050D697 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0769285E2B9F1B2C00809F6E /* EnterCode */,
 				4E5BECB62ABDF5E100E5F61F /* Map */,
 				4EFCA53A2AB1C19B009F48A4 /* EntryOptions */,
 				4E06F1EC2AA32CE60063E7DB /* SignUp */,
@@ -306,6 +345,7 @@
 		4EEA54782A8D10F00050D697 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				07A26BB72B9F5F7700A7EC74 /* CodeEnterView */,
 				4EEA547B2A8D14640050D697 /* LoadingView.swift */,
 				4E2294362A939FBC0083E185 /* UnderlinedTextField.swift */,
 				07DF94EC2B9106A900421EEC /* PaddedTextField.swift */,
@@ -560,6 +600,7 @@
 				4E5BECB82ABDF60C00E5F61F /* MapViewController.swift in Sources */,
 				4E06F1EB2AA294050063E7DB /* SkipNil.swift in Sources */,
 				4EF4A9102AA1200600AE43A7 /* ButtonStyles.swift in Sources */,
+				07A26BB22B9F3BD400A7EC74 /* CodeEnterView.swift in Sources */,
 				4E9397182AAA43E200F6EB7F /* UserDataStorage.swift in Sources */,
 				4EBF3E222AC1E3970006A92F /* Creator.swift in Sources */,
 				4E06F1F62AA331AC0063E7DB /* SignUpAssembly.swift in Sources */,
@@ -574,6 +615,7 @@
 				4EEA54802A8D162D0050D697 /* TabCoordinator.swift in Sources */,
 				4EDCE8912ABF1803008D71E2 /* MapCoordinator.swift in Sources */,
 				4E5BECBC2ABDF62900E5F61F /* MapAssembly.swift in Sources */,
+				07A26BB02B9F1CFF00A7EC74 /* EnterCodeViewModel.swift in Sources */,
 				4EF4A90E2AA11A9600AE43A7 /* TextFieldStyles.swift in Sources */,
 				4EFC65172A8CE4610012C422 /* Router.swift in Sources */,
 				4EDA571F2A92BA81006ACBE4 /* String.swift in Sources */,
@@ -582,17 +624,23 @@
 				4EDCE88B2ABEF7A5008D71E2 /* AWClient.swift in Sources */,
 				4E22943B2A93EA840083E185 /* UITextField.swift in Sources */,
 				4E06F1F22AA330400063E7DB /* SignUpView.swift in Sources */,
+				076928622B9F1BB000809F6E /* EnterCodeView.swift in Sources */,
 				4E2294392A93E8CA0083E185 /* Images.swift in Sources */,
 				4EDA57232A92CBAE006ACBE4 /* SceneAssembly.swift in Sources */,
+				076928602B9F1B9900809F6E /* EnterCodeViewController.swift in Sources */,
+				07A26BB62B9F3F6700A7EC74 /* CodeItemView.swift in Sources */,
 				4EEA54892A8D1C370050D697 /* AnimationDuration.swift in Sources */,
 				4EEA54772A8D108E0050D697 /* SplashAssembly.swift in Sources */,
 				4EDA57212A92BB59006ACBE4 /* Strings.swift in Sources */,
 				4EEA54832A8D19C40050D697 /* UIView.swift in Sources */,
+				07A26BB42B9F3E7A00A7EC74 /* CodeTextField.swift in Sources */,
 				4EEA54762A8D108E0050D697 /* SplashViewModel.swift in Sources */,
 				4EFCC2D72ABF31750052BC96 /* MapView.swift in Sources */,
 				4E2294372A939FBC0083E185 /* UnderlinedTextField.swift in Sources */,
+				076928642B9F1CC900809F6E /* EnterCodeAssembly.swift in Sources */,
 				4EDA570B2A928675006ACBE4 /* Fonts.swift in Sources */,
 				4E7F039F2A8C7E7B00D14520 /* SceneDelegate.swift in Sources */,
+				0769285D2B9F18C800809F6E /* InputPhoneModel.swift in Sources */,
 				4EFC65192A8CE4610012C422 /* BaseCoordinator.swift in Sources */,
 				4EEA54742A8D108E0050D697 /* SplashContract.swift in Sources */,
 				4E06F1F02AA32FB80063E7DB /* SignUpViewController.swift in Sources */,

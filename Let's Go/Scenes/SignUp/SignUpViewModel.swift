@@ -96,7 +96,7 @@ final class SignUpViewModel: SignUpViewModelProtocol, SignUpViewModelOutputs {
             .withLatestFrom(emailPasswordAndName)
             .map { email, password, name in
                 Task {
-                    try await UserAccount.shared.createAccount(email: email, password: password, name: name)
+                    try await UserAccount.shared.createAccount(email: email, userID: password, name: name)
                     sceneOutput?.login()
                     try await UserAccount.shared.createEmailSession(email: email, password: password)
                 }

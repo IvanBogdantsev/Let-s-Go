@@ -20,6 +20,10 @@ final class UserAccount: AWClient {
         Account(client)
     }()
     
+    private lazy var functions: Functions = {
+        Functions(client)
+    }()
+    
     @UserDataStorage<String>(key: UserDefaultsKey.loginSessionID)
     private var sessionID: String?
     
@@ -27,11 +31,16 @@ final class UserAccount: AWClient {
         super.init()
     }
     
-    func createAccount(email: String, password: String, name: String? = nil) async throws {
+    func inputPhone() async throws {
+        let body = await InputPhoneModel(jwt: try account.createJWT().jwt)
+        let _ = try await functions.createExecution(functionId: "6544f38254bc65fa3145", body: body.makeJsonString())
+    }
+    
+    func createAccount(email: String, userID: String, name: String? = nil) async throws {
         let _ = try await account.create(
-            userId: ID.unique(),
+            userId: userID,
             email: email,
-            password: password,
+            password: userID,
             name: name
         )
     }

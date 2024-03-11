@@ -11,6 +11,7 @@ protocol LoginSceneOutput {
     func goToSignUp()
     func goToLogin()
     func login()
+    func goToEnterCode()
 }
 
 final class LoginCoordinator: BaseCoordinator {
@@ -34,6 +35,11 @@ final class LoginCoordinator: BaseCoordinator {
 }
 
 extension LoginCoordinator: LoginSceneOutput {
+    func goToEnterCode() {
+        let scene = EnterCodeAssembly(sceneOutput: self).makeScene()
+        router.push(scene, animated: true)
+    }
+    
     func goToSignUp() {
         let scene = SignUpAssembly(sceneOutput: self).makeScene()
         router.push(scene, animated: true)

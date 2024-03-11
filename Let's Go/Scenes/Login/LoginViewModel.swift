@@ -8,6 +8,7 @@
 import RxSwift
 import RxRelay
 import Appwrite
+import Foundation
 
 protocol LoginViewModelInputs {
     func phoneChanged(_ phone: String?)
@@ -33,30 +34,44 @@ final class LoginViewModel: LoginViewModelProtocol, LoginViewModelOutputs {
     private let phoneChangedValue = PublishRelay<String?>()
     private let checkboxChangedValue = PublishRelay<Bool?>()
     private let sceneOutput: LoginSceneOutput?
+    private var phone: String = ""
     // MARK: - Init
     init(sceneOutput: LoginSceneOutput?) {
         self.sceneOutput = sceneOutput
-        
-        self.isFormValid = phoneChangedValue.asObservable()
-            .map { [weak self] email in
-                self?.isValid(phone: email ?? "") ?? false
-            }
-        
         let phoneAndCheckbox = Observable.combineLatest(phoneChangedValue.skipNil(), checkboxChangedValue.asObservable().skipNil()).share()
         self.isFormValid = phoneAndCheckbox.map { [weak self] phone, isChecked in
             guard let self else { return  false }
-            return self.isValid(phone: phone) && isChecked
+            let isValidPhone = self.isValid(phone: phone)
+            if isValidPhone {
+                self.phone = phone
+            }
+            return isValidPhone && isChecked
         }
     }
     // MARK: - Private methods
     private func isValid(phone: String) -> Bool {
         return isValidPhone(phone: phone)
     }
+    
+    private func makeId() -> String {
+        return "\(phone)@\(UUID().uuidString).ru"
+    }
 }
 // MARK: - LoginViewModelInputs
 extension LoginViewModel: LoginViewModelInputs {
     func countinueButtonPressed() {
-        print("tap")
+//        let id = ID.unique()
+//        let userId = "\(phone)@\(id).ru"
+//        Task {
+//            do {
+//                try await UserAccount.shared.createAccount(email: userId, userID: id)
+//                try await UserAccount.shared.createEmailSession(email: userId, password: id)
+//                try await UserAccount.shared.inputPhone()
+//            } catch {
+//                print(error)
+//            }
+//        }
+        sceneOutput?.goToEnterCode()
     }
     
     func checkboxChanged(_ isChecked: Bool) {
