@@ -54,7 +54,7 @@ final class EnterCodeView: UIView {
         return $0
     }(UIButton())
     
-    private lazy var codeTextField: CodeEnterView = {
+    private(set) lazy var codeTextField: CodeEnterView = {
         $0.length = 4
         return $0
     }(CodeEnterView())

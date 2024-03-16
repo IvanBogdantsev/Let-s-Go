@@ -39,7 +39,7 @@ final class LoginViewController: UIViewController {
     // MARK: - Private methods
     private func bind() {
         viewModel.outputs.isFormValid.subscribe { [weak self] isValid in
-            self?.loginView.setIsValid(true)
+            self?.loginView.setIsValid(isValid)
         }
         .disposed(by: disposeBag)
         

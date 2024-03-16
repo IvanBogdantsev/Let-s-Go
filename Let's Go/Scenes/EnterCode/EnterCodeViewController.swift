@@ -56,6 +56,23 @@ final class EnterCodeViewController: UIViewController {
         enterCodeView.sendCodeAgaingButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.enterCodeView.startTimer()
+                self?.viewModel.inputs.sendCodeAgain()
+            })
+            .disposed(by: disposeBag)
+        
+        enterCodeView.codeTextField.rx.controlEvent([.valueChanged])
+            .asObservable().subscribe({ [weak self] _ in
+                guard let self else { return }
+                self.viewModel.inputs.enteredCode(self.enterCodeView.codeTextField.code)
+            }).disposed(by: disposeBag)
+        
+        viewModel.outputs.isCodeSuccessed.subscribe { [weak self] isCodeSuccessed in
+            self?.enterCodeView.setIsValid(isCodeSuccessed)
+        }.disposed(by: disposeBag)
+        
+        enterCodeView.loginButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.inputs.login()
             })
             .disposed(by: disposeBag)
     }

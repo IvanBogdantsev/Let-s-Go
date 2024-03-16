@@ -31,9 +31,15 @@ final class UserAccount: AWClient {
         super.init()
     }
     
+    func confirmCode(_ code: String) async throws -> ConfirmCodeResponseModel? {
+        let body = await ConfirmCodeModel(jwt: try account.createJWT().jwt, code: code)
+        let response = try await functions.createExecution(functionId: "654572cb117c272cb82f", body: body.toJson())
+        return try response.responseBody.fromJson(to: ConfirmCodeResponseModel.self)
+    }
+    
     func inputPhone() async throws {
         let body = await InputPhoneModel(jwt: try account.createJWT().jwt)
-        let _ = try await functions.createExecution(functionId: "6544f38254bc65fa3145", body: body.makeJsonString())
+        let _ = try await functions.createExecution(functionId: "6544f38254bc65fa3145", body: body.toJson())
     }
     
     func createAccount(email: String, userID: String, name: String? = nil) async throws {

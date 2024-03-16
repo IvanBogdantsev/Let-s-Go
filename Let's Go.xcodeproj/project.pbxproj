@@ -15,6 +15,7 @@
 		07A26BB22B9F3BD400A7EC74 /* CodeEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BB12B9F3BD400A7EC74 /* CodeEnterView.swift */; };
 		07A26BB42B9F3E7A00A7EC74 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BB32B9F3E7A00A7EC74 /* CodeTextField.swift */; };
 		07A26BB62B9F3F6700A7EC74 /* CodeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BB52B9F3F6700A7EC74 /* CodeItemView.swift */; };
+		07A26BBD2BA5CE8400A7EC74 /* ComfirmCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A26BBC2BA5CE8400A7EC74 /* ComfirmCodeModel.swift */; };
 		07DF94EB2B90F2F800421EEC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DF94EA2B90F2F800421EEC /* Colors.xcassets */; };
 		07DF94ED2B9106A900421EEC /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF94EC2B9106A900421EEC /* PaddedTextField.swift */; };
 		4E0269292AACA78700FD38FF /* AlertControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0269282AACA78700FD38FF /* AlertControllers.swift */; };
@@ -91,6 +92,7 @@
 		07A26BB12B9F3BD400A7EC74 /* CodeEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEnterView.swift; sourceTree = "<group>"; };
 		07A26BB32B9F3E7A00A7EC74 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
 		07A26BB52B9F3F6700A7EC74 /* CodeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeItemView.swift; sourceTree = "<group>"; };
+		07A26BBC2BA5CE8400A7EC74 /* ComfirmCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComfirmCodeModel.swift; sourceTree = "<group>"; };
 		07DF94EA2B90F2F800421EEC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		07DF94EC2B9106A900421EEC /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		287A4428F3D44767720E2CDE /* Pods_Let_s_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_s_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +268,7 @@
 				4EBF3E1F2AC1DE2B0006A92F /* Placemark.swift */,
 				4EBF3E212AC1E3970006A92F /* Creator.swift */,
 				0769285C2B9F18C800809F6E /* InputPhoneModel.swift */,
+				07A26BBC2BA5CE8400A7EC74 /* ComfirmCodeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				4EDCE88B2ABEF7A5008D71E2 /* AWClient.swift in Sources */,
 				4E22943B2A93EA840083E185 /* UITextField.swift in Sources */,
 				4E06F1F22AA330400063E7DB /* SignUpView.swift in Sources */,
+				07A26BBD2BA5CE8400A7EC74 /* ComfirmCodeModel.swift in Sources */,
 				076928622B9F1BB000809F6E /* EnterCodeView.swift in Sources */,
 				4E2294392A93E8CA0083E185 /* Images.swift in Sources */,
 				4EDA57232A92CBAE006ACBE4 /* SceneAssembly.swift in Sources */,

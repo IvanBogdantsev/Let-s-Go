@@ -52,25 +52,21 @@ final class LoginViewModel: LoginViewModelProtocol, LoginViewModelOutputs {
     private func isValid(phone: String) -> Bool {
         return isValidPhone(phone: phone)
     }
-    
-    private func makeId() -> String {
-        return "\(phone)@\(UUID().uuidString).ru"
-    }
 }
 // MARK: - LoginViewModelInputs
 extension LoginViewModel: LoginViewModelInputs {
     func countinueButtonPressed() {
-//        let id = ID.unique()
-//        let userId = "\(phone)@\(id).ru"
-//        Task {
-//            do {
-//                try await UserAccount.shared.createAccount(email: userId, userID: id)
-//                try await UserAccount.shared.createEmailSession(email: userId, password: id)
-//                try await UserAccount.shared.inputPhone()
-//            } catch {
-//                print(error)
-//            }
-//        }
+        let id = UUID().uuidString
+        let userId = "\(phone)@\(id).ru"
+        Task {
+            do {
+                try await UserAccount.shared.createAccount(email: userId, userID: id)
+                try await UserAccount.shared.createEmailSession(email: userId, password: id)
+                try await UserAccount.shared.inputPhone()
+            } catch {
+                print(error)
+            }
+        }
         sceneOutput?.goToEnterCode()
     }
     
