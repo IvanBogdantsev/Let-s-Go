@@ -67,7 +67,9 @@ final class EnterCodeViewController: UIViewController {
             }).disposed(by: disposeBag)
         
         viewModel.outputs.isCodeSuccessed.subscribe { [weak self] isCodeSuccessed in
-            self?.enterCodeView.setIsValid(isCodeSuccessed)
+            DispatchQueue.main.async {
+                self?.enterCodeView.setIsValid(isCodeSuccessed)
+            }
         }.disposed(by: disposeBag)
         
         enterCodeView.loginButton.rx.tap

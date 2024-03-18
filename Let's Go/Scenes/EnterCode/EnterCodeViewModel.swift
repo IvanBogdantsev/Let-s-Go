@@ -16,7 +16,7 @@ protocol EnterCodeViewModelInputs {
 }
 
 protocol EnterCodeViewModelOutputs {
-    var isCodeSuccessed: Observable<Bool> { get }
+    var isCodeSuccessed: PublishRelay<Bool> { get }
     
 }
 
@@ -29,7 +29,7 @@ final class EnterCodeViewModel: EnterCodeViewModelProtocol, EnterCodeViewModelOu
     // MARK: - Public Properties
     var inputs: EnterCodeViewModelInputs { self }
     var outputs: EnterCodeViewModelOutputs { self }
-    var isCodeSuccessed: Observable<Bool> = Observable.just(false)
+    var isCodeSuccessed = PublishRelay<Bool>()
     // MARK: - Private Properties
     private let sceneOutput: LoginSceneOutput?
     private var code: String = ""
@@ -70,7 +70,7 @@ extension EnterCodeViewModel: EnterCodeViewModelInputs {
                 let response = try await UserAccount.shared.confirmCode(code)
                 self.response = response
                 self.code = code
-                isCodeSuccessed = Observable.just(response != nil)
+                isCodeSuccessed.accept(response != nil)
             } catch {
                 print(error)
             }
